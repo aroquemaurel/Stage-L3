@@ -1,7 +1,7 @@
-\documentclass[12pt,a4paper,openany]{book}
+\documentclass[12pt,a4paper]{book}
 \usepackage{lmodern}
 \usepackage[svgnames]{xcolor} % Required to specify font color
-\input{includes/couleurs.tex}
+\input{styles/couleurs.tex}
 
 \usepackage[utf8]{inputenc} 
 \usepackage[T1]{fontenc}
@@ -26,30 +26,55 @@
 \newcommand{\formation}{L3 Informatique}
 \newcommand{\semestre}{6}
 \newcommand{\annee}{2014}
-\newcommand{\prof}{Christine \bsc{Maurel} -- Jean-Paul \bsc{Arcangeli}}
 
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage[some]{background}
+\usepackage{lipsum}
 
 \newcommand{\pole}{}
-\newcommand{\sigle}{prolog}
 
+\input{styles/listings.tex}
+\input{styles/remarquesExempleAttention.tex}
+\input{styles/polices.tex}
+\input{styles/affichageChapitre.tex}
+\input{styles/headers.tex}
 
-\input{includes/listings.tex}
-%\input{includes/couv.tex}
-\input{includes/remarquesExempleAttention.tex}
-\input{includes/polices.tex}
-\input{includes/affichageChapitre.tex}
-\newcommand{\pfp}{\texttt{pfp}}
-
-\newcommand{\ifp}{\texttt{if}}
-\newcommand{\elsep}{\texttt{else}}
-
-\input{includes/couverture.tex}
 \makeatother
 \includeonly {
+%	contents/thanks,
+	contents/intro,
+	contents/conti,
+%	contents/problem,
+%	contents/greent,
+%	contents/bilan
 }
-\input{includes/titlePage.tex}
 \begin{document}
-	\setcounter{tocdepth}{1}
+	\setcounter{tocdepth}{2}
 	\setcounter{secnumdepth}{3}
 	\setcounter{minitocdepth}{1}
+	\input{styles/frontPage.tex}
+	~\newpage
+	\addcontentsline{toc}{chapter}{Remerciements} 
+	~
+	\vfill
+	\begin{flushright}
+		\begin{minipage}{0.6\textwidth}
+			\input{contents/thanks.tex}
+		\end{minipage}
+	\end{flushright}
+	\vfill
+	~
+	\include{contents/intro}
+	\tableofcontents
+	\include{contents/conti}
+	\include{contents/problem}
+	\include{contents/greent}
+	\include{contents/bilan}
+	\appendix
+	\chapter{Glossaire}
+	\chapter{Références}
+	\listoffigures
+
+
 \end{document}
