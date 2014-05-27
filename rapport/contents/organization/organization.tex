@@ -1,0 +1,45 @@
+\chapter{Organisation du travail}
+\section{L'équipe de développement}
+Nous sommes 3 développeurs dans cet équipe, Alain \bsc{Fernandez} le chef d'équipe, qui nous suivait et nous aider à planifier, organisais les réunions, tout en développant les tests managers\footnote{Cf \ref{testManager}}. Olivier \bsc{Ramel} sous-traitant travaillant chez SII, affecté à ce projet et développant particulièrement la partie Serveur. Et moi même, stagiaire, s'occupant de la partie parsing et génération\footnote{Cf \ref{generation}}. Alain et Olivier avait commencé la conception du logiciel avant mon arrivée, ils m'ont formés et expliqués tous les deux afin que je puiss rapidement les aider.
+
+Peu de temps après mon arrivé, nous avons fixés une réunion hebdomadaire tous les lundis matins afin d'expliquer nos différents avancements ou problèmes, ce qui permettait de se projeter, et de régler les différents problèmes. Cela ne nous a pas empêché d'effectuer un certain nombre de réunions ponctuels pour continuer les points de conceptions n'ayant pas été terminés, ou les différents problèmes que nous avons rencontrés durant le développement.
+
+\section{Documentation}
+Lorsque nous fixions des choix de conceptions ou des choix stratégiques vis-à-vis du client, nous notions tout dans un document au format Word. Ainsi toutes les traces de nos réunions et de notre conception était accessible sur un disque réseau ce qui permet à l'équipe de lire ce qu'on avait dis plusieurs semaines avant, et de tenir au courant les autres.
+
+\section{Outils de développement}
+Afin de travailler de façon efficaces, nous avons utilisés des outils aidant au développement.
+
+\begin{wrapfigure}{l}{2cm}
+	\includegraphics[width=2cm]{contents/images/logoJava.png}
+\end{wrapfigure}
+La partie client de notre plateforme est développée en Java à sa version 6, Java nous permettant d'avoir un langage fortement typé, très puissant au niveau du paradigme Objet, connu de l'équipe, assez simple de déploiement et multiplateforme. 
+
+Les postes de continental possédant pour la pluspart Java 6, aucune fonctionnalités ultérieur à cette version n'a été utilisé.\\~
+
+\newpage
+\begin{wrapfigure}{r}{2.5cm}
+	\includegraphics[width=2.5cm]{contents/images/logoGit.png}
+\end{wrapfigure}
+Nous avons utilisé Git afin de faciliter le travail collaboratif d'une part, et de versionner le code du logiciel d'autres part. Git permet de fusionner les modifications de plusieurs développeurs, tant que nous ne modifions pas le même fichier en même temps. Ainsi, la fusion de nos modifications était faite automatiquement. 
+
+De plus, à chaque fois que nous effectuons une modification, nous faisions un << commit >>, dès lors un point de restauration se créé : il est possible de récupérer n'importe quelle version de logiciel depuis son commencement. Nous y insérions un message clair expliquant ce que l'on à fait, cela pouvait permettre aux autres développeurs de l'équipe de se tenir au courant de l'avancement.
+
+\begin{wrapfigure}{l}{2.5cm}
+	\includegraphics[width=2.5cm]{contents/images/logoEclipse.png}
+\end{wrapfigure}
+Nous développions tous sous l'IDE\footnote{Integrated Development Tools} Eclipse Kepler, avec le plugin Git et le plugin Python. Le plugin Git pour avoir des outils aidant à résoudre les conflits éventuels que nous avons rencontrés, et le plugin Python permet de développer avec l'interpréteur et la coloration syntaxique Python. Je ne m'en suis que rarement servi, mais il était indispensable pour développer la partie serveur de notre plateforme, qui fonctionne en Python.
+
+Nous n'avons pas utilisé d'autres plugins, et restons avec une version simple nous permettant de développer facilement et sans problème.
+
+\begin{wrapfigure}{r}{2.5cm}
+	\includegraphics[width=2.5cm]{contents/images/logoEnterpriseArchitect.png}
+\end{wrapfigure}
+Nous avons travaillé avec la norme UML\footnote{Unified Modelling Language} 2 afin de concevoir la plateforme, en utilisant particulièrement des diagrammes de classes, mais aussi des diagrammes de cas d'utilisations ou d'activité. 
+
+Pour dessiner ces diagrammes, et les noter dans la documentation, nous les pensions d'abord sur tableau blanc, mais ensuite il nous fallait un outil puissant afin de les dessiner sur informatique. Pour cela nous avons utilisés Enterprise Architect, un logiciel propriétaire payant permettant de créer tous les diagrammes de la norme UML2.\\~
+
+\begin{wrapfigure}{l}{2.5cm}
+	\includegraphics[width=2.5cm]{contents/images/logoLatex.png}
+\end{wrapfigure}
+Afin de rédiger ce rapport, et le diaporama de soutenance, j'ai utilisé \LaTeX{}, un langage et un système de composition de documents fonctionnant à l'aide de macro-commandes. Son principal avantage est de privilégier le contenu à la mise en forme, celles-ci étant réalisé automatiquement par le système une fois un style définis. 

@@ -4,30 +4,68 @@
 \contentsline {chapter}{\numberline {1}Continental}{9}{chapter.1}
 \contentsline {section}{\numberline {1.1}Organisation de l'entreprise}{9}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Continental AG}{9}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Histoire de l'entreprise}{9}{subsection.1.1.2}
-\contentsline {subsection}{\numberline {1.1.3}Activit\IeC {\'e}s des diff\IeC {\'e}rentes braches}{10}{subsection.1.1.3}
-\contentsline {section}{\numberline {1.2}Le contexte de l'\IeC {\'e}quipe V\IeC {\'e}rification \& Validation}{10}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}L'\IeC {\'e}quipe}{10}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Le besoin}{10}{subsection.1.2.2}
-\contentsline {chapter}{\numberline {2}Le probl\IeC {\`e}me}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Les tests}{9}{section.2.1}
-\contentsline {section}{\numberline {2.2}La solution : \textit {GreenT}}{9}{section.2.2}
-\contentsline {chapter}{\numberline {3}D\IeC {\'e}veloppement de \textit {GreenT}}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Fonctionnement g\IeC {\'e}n\IeC {\'e}ral}{11}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Sch\IeC {\'e}ma de fonctionnement}{11}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Le fichier Walkthrough}{11}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Le test manager}{11}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}D\IeC {\'e}coupage en Bundle}{11}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Le parser}{11}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}La grammaire : utilisation de Antlr}{11}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}La visite de l'arbre d'expression}{11}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}La gestion des exceptions}{11}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Le g\IeC {\'e}n\IeC {\'e}rateur}{11}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Le moteur de template : freemaker}{11}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}G\IeC {\'e}n\IeC {\'e}ration des tests}{11}{subsection.3.3.2}
-\contentsline {chapter}{\numberline {4}Bilans}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}Bilan pour Continental}{13}{section.4.1}
-\contentsline {section}{\numberline {4.2}Bilan personnel}{14}{section.4.2}
-\contentsline {chapter}{\numberline {A}Glossaire}{17}{appendix.A}
-\contentsline {chapter}{\numberline {B}R\IeC {\'e}f\IeC {\'e}rences}{19}{appendix.B}
-\contentsline {chapter}{\numberline {C}Table des figures}{21}{appendix.C}
+\contentsline {subsection}{\numberline {1.1.2}Histoire de l'entreprise}{10}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Activit\IeC {\'e}s des diff\IeC {\'e}rentes branches}{11}{subsection.1.1.3}
+\contentsline {section}{\numberline {1.2}Le contexte de l'\IeC {\'e}quipe V\IeC {\'e}rification \& Validation}{12}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}L'\IeC {\'e}quipe}{12}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Le besoin}{12}{subsection.1.2.2}
+\contentsline {chapter}{\numberline {2}Organisation du travail}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}L'\IeC {\'e}quipe de d\IeC {\'e}veloppement}{13}{section.2.1}
+\contentsline {section}{\numberline {2.2}Documentation}{13}{section.2.2}
+\contentsline {section}{\numberline {2.3}Outils de d\IeC {\'e}veloppement}{13}{section.2.3}
+\contentsline {chapter}{\numberline {3}Le probl\IeC {\`e}me}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Les tests}{15}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Le plugin}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}La TA3}{16}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}La solution : \textit {\textit {GreenT}}}{17}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}G\IeC {\'e}n\IeC {\'e}ration de tests automatiques}{17}{subsection.3.2.1}
+\contentsline {subsubsection}{Les tests d'int\IeC {\'e}gration du plugin Ford}{17}{section*.3}
+\contentsline {subsubsection}{Les autres projets}{17}{section*.4}
+\contentsline {subsection}{\numberline {3.2.2}L'utilisation de \textit {GreenT} comme une biblioth\IeC {\`e}que}{18}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}L'ex\IeC {\'e}cution des tests}{18}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}D\IeC {\'e}veloppement de \textit {\textit {GreenT}}}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Fonctionnement g\IeC {\'e}n\IeC {\'e}ral}{19}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Le fichier Walkthrough}{19}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Fonctionnalit\IeC {\'e}s principales}{20}{subsection.4.1.2}
+\contentsline {subsubsection}{Parsing et G\IeC {\'e}n\IeC {\'e}ration}{20}{section*.5}
+\contentsline {subsubsection}{R\IeC {\'e}solution des alias}{21}{section*.6}
+\contentsline {subsubsection}{Stimulation}{22}{section*.7}
+\contentsline {subsubsection}{Les traces et leurs \IeC {\'e}valuations}{22}{section*.8}
+\contentsline {subsubsection}{Le TestManager}{22}{section*.9}
+\contentsline {subsubsection}{Production de rapport d\IeC {\'e}taill\IeC {\'e}}{23}{section*.10}
+\contentsline {subsubsection}{Mise \IeC {\`a} jour du Walkthrough}{23}{section*.11}
+\contentsline {subsubsection}{Sch\IeC {\'e}ma de fonctionnement global}{23}{section*.12}
+\contentsline {section}{\numberline {4.2}Le parser}{24}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}La grammaire}{24}{subsection.4.2.1}
+\contentsline {subsubsection}{Les sc\IeC {\'e}narios de stimulations}{24}{section*.13}
+\contentsline {subsubsection}{Le fichier cnf}{24}{section*.14}
+\contentsline {subsubsection}{Les expected Behavior}{25}{section*.15}
+\contentsline {subsubsection}{Les alias locaux}{26}{section*.16}
+\contentsline {subsubsection}{Variables \IeC {\`a} enregistrer}{26}{section*.17}
+\contentsline {subsection}{\numberline {4.2.2}Impl\IeC {\'e}mentation du parser}{26}{subsection.4.2.2}
+\contentsline {subsubsection}{La grammaire : utilisation de Antlr}{26}{section*.18}
+\contentsline {paragraph}{Grammaire du Check}{26}{section*.18}
+\contentsline {paragraph}{Grammaire de l'Expected Behavior}{27}{figure.4.4}
+\contentsline {subsubsection}{La visite de l'arbre d'expression}{28}{section*.19}
+\contentsline {subsubsection}{La gestion des exceptions}{28}{section*.20}
+\contentsline {paragraph}{Erreurs de syntaxe}{29}{section*.20}
+\contentsline {paragraph}{Erreurs d'alias}{29}{lstnumber.4.8.3}
+\contentsline {section}{\numberline {4.3}Le g\IeC {\'e}n\IeC {\'e}rateur}{29}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}G\IeC {\'e}n\IeC {\'e}ration des tests}{29}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Le moteur de template : freemarker}{30}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}L'analyse des traces et la prononciation du verdict}{31}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Arbre de l'expectedBehavior}{31}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Analyse de la trace}{32}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Prononciation du verdict}{33}{subsection.4.4.3}
+\contentsline {chapter}{\numberline {5}Bilans}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Bilan pour Continental}{35}{section.5.1}
+\contentsline {section}{\numberline {5.2}Bilan personnel}{36}{section.5.2}
+\contentsline {chapter}{\numberline {A}Glossaire}{39}{appendix.A}
+\contentsline {chapter}{\numberline {B}Templates}{41}{appendix.B}
+\contentsline {section}{\numberline {B.1}Template des stimulations}{41}{section.B.1}
+\contentsline {section}{\numberline {B.2}Template d'un \texttt {GreenTTest}}{43}{section.B.2}
+\contentsline {chapter}{\numberline {C}Exemples de fichiers g\IeC {\'e}n\IeC {\'e}r\IeC {\'e}s}{45}{appendix.C}
+\contentsline {section}{\numberline {C.1}Exemple de StimScenario}{45}{section.C.1}
+\contentsline {section}{\numberline {C.2}Exemple de \texttt {GreenTTest}}{47}{section.C.2}
+\contentsline {chapter}{\numberline {D}Liste des codes sources}{49}{appendix.D}
+\contentsline {chapter}{\numberline {E}Table des figures}{51}{appendix.E}

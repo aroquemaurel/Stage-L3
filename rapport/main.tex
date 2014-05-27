@@ -19,6 +19,7 @@
 \usepackage[francais]{minitoc}
 \usepackage[final]{pdfpages} 
 \usepackage{graphicx} % Required for box manipulation
+\usepackage{epstopdf}
 
 \newcommand{\titre}{Développement d'une plateforme de Tests automatiques}
 \newcommand{\subtitle}{GreenT}
@@ -42,16 +43,20 @@
 
 \makeatother
 \includeonly {
-%	contents/thanks,
 	contents/intro,
-	contents/conti,
-%	contents/problem,
-%	contents/greent,
-%	contents/bilan
+	contents/conti/conti,
+	contents/problem/problem,
+	contents/organization/organization,
+	contents/greent/greent,
+%	contents/bilan/bilan,
+%
+	annexes/glossary,
+	annexes/templates,
+	annexes/generatesFiles
 }
 \begin{document}
-	\setcounter{tocdepth}{2}
-	\setcounter{secnumdepth}{3}
+	\setcounter{tocdepth}{1}
+	\setcounter{secnumdepth}{2}
 	\setcounter{minitocdepth}{1}
 	\input{styles/frontPage.tex}
 	~\newpage
@@ -59,7 +64,7 @@
 	~
 	\vfill
 	\begin{flushright}
-		\begin{minipage}{0.6\textwidth}
+		\begin{minipage}{0.7\textwidth}
 			\input{contents/thanks.tex}
 		\end{minipage}
 	\end{flushright}
@@ -67,14 +72,17 @@
 	~
 	\include{contents/intro}
 	\tableofcontents
-	\include{contents/conti}
-	\include{contents/problem}
-	\include{contents/greent}
-	\include{contents/bilan}
-	\appendix
-	\chapter{Glossaire}
-	\chapter{Références}
-	\listoffigures
+	\include{contents/conti/conti}
+	\include{contents/organization/organization}	
+	\include{contents/problem/problem}
+	\include{contents/greent/greent}
+	\include{contents/bilan/bilan}
 
+	\appendix
+	\include{annexes/glossary}
+	\include{annexes/templates}
+	\include{annexes/generatesFiles}
+	\lstlistoflistings
+	\listoffigures
 
 \end{document}
