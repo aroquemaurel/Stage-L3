@@ -2,7 +2,7 @@
 	Comme montré dans le schéma \ref{fig:generalDig}, une fois le walkthrough parsé, il faut générer les fichiers nécessaire au test. Pour cela, j'ai créé un \textit{package} de classes ayant des services permettant d'ajouter les fonctionnalités à générer : Ajouter un check, ajouter une affectation, ajouter une action debugger, ajouter les informations des tests, \ldots et lancer la génération du fichier.
 
 		\subsection{Génération des tests}
-		Je dois générer 3 types de fichiers : un précondstim, des stimscenarios et un \texttt{GreenTTest} pour chaque test. Chacune des classes que je génères hérite de classe présente dans \textit{GreenT}, respectivement \texttt{PrecondStim}, \texttt{StimScenario} et \texttt{GreenTTest}.
+		Je dois générer 3 types de fichiers : un précondstim, des stimscenarios et un \texttt{GreenTTest} pour chaque test. Chacune des classes que je génères hérite d'une classe présente dans \textit{GreenT}, respectivement \texttt{PrecondStim}, \texttt{StimScenario} et \texttt{GreenTTest}.
 
 		La génération des fichiers possède des points communs en fonction du type de fichier, principalement entre un \texttt{PrecondStim} et un \texttt{StimScenario}, ainsi j'ai conçu un arbre d'héritage assez simple me permettant de factoriser le code : 
 		\begin{figure}[H]
@@ -18,7 +18,7 @@
 		\end{wrapfigure}
 		Les classes que je génères ont un gabarit commun, seul l'implémentation des méthodes changent, ainsi plutôt que réécrire systématiquement tout le corps de la classe, il parraissait intéressant d'avoir un moteur de \textit{template}, j'ai choisi FreeMarker.
 
-		J'ai un fichier gabarit utilisant le format FreeMarker, avec dedans des appels d'objet, lors de la sérialisation, je fournis à FreeMarker les objets concernés, l'adresse du gabarit et c'est lui qui écrira le fichier \texttt{.java}.
+		J'ai un fichier gabarit utilisant le format FreeMarker, avec dedans des appels d'objet. Lors de la sérialisation, je fournis à FreeMarker les objets concernés, l'adresse du gabarit et c'est lui qui écrira le fichier \texttt{.java}.
 
 		Deux fichiers de templates ont été nécessaires : un pour les stim, et un pour le \textit{GreenTTest}. En effet un precondstim et un stimscenario n'ont que peu de différence, il était donc possible de les regrouper avec le même template.
 

@@ -1,7 +1,7 @@
 	\section{Le parser}\label{sectionParser}
-	Avant mon arrivée, le client et l'équipe avait conçu une grammaire de langage permettant de spécifier le fonctionnement du test, afin d'effectuer un scénario de stimulation où une \textit{Expected Behavior} il faut respecter une syntaxe précise, dans le cas contraire une exception est levée.
+	Avant mon arrivée, le client et l'équipe avait conçu une grammaire de langage permettant de spécifier le fonctionnement du test, afin d'effectuer un scénario de stimulation ou une \textit{Expected Behavior} il faut respecter une syntaxe précise, dans le cas contraire une exception est levée.
 
-	\subsection{La grammaire}
+	\subsection{La grammaire}\label{specParser}
 	\subsubsection{Les scénarios de stimulations}
 	Un \textit{precondstim} peut contenir des affectations, des \textit{check} et des actions débugger : 
 	\begin{description}
@@ -14,7 +14,7 @@
 	Les scénarios de stimulations quant-à eux ont le même fonctionnement, la seule différence est qu'ils doivent être encadrés des balises \texttt{BEGIN SCENARIO nomScenario} et \texttt{END SCENARIO}.
 
 	\subsubsection{Le fichier cnf}
-	Comme nous l'avons expliqué, les tests sont spécifiés dans le fichier \textit{Walkthrough} qui est au format Excel, étant donné la difficulté d'éditer de longs texte dans la même cellule, il parait important de mettre les scénarios de stimulations dans un autre fichier : c'est l'utilité du fichier cnf, celui-ci contiendra des groupes d'actions à effectuer, spécifiés par un nom\footnote{Cela pourrai s'approcher du fonctionnement de sous-programmes} : le fichier Excel pourra ainsi ne contenir que le nom du groupe d'action, et de la place sera gagnée dans la cellule.
+	Comme nous l'avons expliqué, les tests sont spécifiés dans le fichier \textit{Walkthrough} qui est au format Excel, étant donné la difficulté d'éditer de longs texte dans la même cellule, il parait important de mettre les scénarios de stimulations dans un autre fichier : c'est l'utilité du fichier cnf, celui-ci contiendra des groupes d'actions à effectuer, spécifiés par un nom\footnote{Cela pourrait s'approcher du fonctionnement de sous-programmes} : le fichier Excel pourra ainsi ne contenir que le nom du groupe d'action, et de la place sera gagnée dans la cellule.
 
 	La syntaxe du fichier est assez simple :
 \begin{lstlisting}[caption=Exemple de fichier cnf, language=C]
@@ -86,10 +86,10 @@ FlSys_stFlLvl, C_FlSys_stFlLvl, LV_REQ_ES_AAS, LV_AAS_ACT
 		\begin{wrapfigure}{r}{3cm}
 			\includegraphics[width=3cm]{contents/images/antlr.jpg}
 		\end{wrapfigure}
-		J'étais en charge d'écrire le parser spécifié dans la section \ref{sectionParser}. Comme nous l'avons vu, celui-ci intègre beaucoup de grammaires différentes, notamment celle des \textit{Expected Behavior} qui est assez complexe. \\
-		Une solution à été choisis afin d'optimiser au maximum le temps de développement et de limiter les erreurs : utilisation de Antlr\footnote{ANother Tool for Laguage Recognition}.
+		J'étais en charge d'écrire le parser spécifié dans la section \ref{specParser}. Comme nous l'avons vu, celui-ci intègre beaucoup de grammaires différentes, notamment celle des \textit{Expected Behavior} qui est assez complexe. \\
+		Une solution a été choisis afin d'optimiser au maximum le temps de développement et de limiter les erreurs : utilisation de Antlr\footnote{ANother Tool for Laguage Recognition}.
 
-		Antlr est un framework libre de construction de compilateurs, il prend en entrée une grammaire, définissant notre langage à reconnaître et produit automatiquement le code Java permettant de reconnaître ce langage, ceci en parcourant l'arbre syntaxique. Il ne nous est donc plus nécessaire d'effectuer cette partie du travail, il faut simplement que nous effectuons les bonnes actions en fonction de notre emplacement dans l'arbre.
+		Antlr est un framework libre de construction d'interpreteurs, il prend en entrée une grammaire, définissant notre langage à reconnaître et produit automatiquement le code Java permettant de reconnaître ce langage, ceci en parcourant l'arbre syntaxique. Il ne nous est donc plus nécessaire d'effectuer cette partie du travail, il faut simplement que nous effectuons les bonnes actions en fonction de notre emplacement dans l'arbre.
 
 		Antlr à une syntaxe très simple pour définir une grammaire, il est nécessaire de déclarer tous nos mots clé tel que \texttt{if}, \texttt{check}, mais aussi les caractères utilisés dans le langage tel que \texttt{(, ), {; }} où simplement le retour chariot\footnote{Celui-ci correspondant à \texttt{\textbackslash n} ou \texttt{\textbackslash  n\textbackslash r} sous Windows}. Une fois que nos mots clés sont déclarés, il est possible de construire nos grammaires : pour cela, Antlr possède un outil de conception de grammaire, celui-ci a la particularité de construire le diagramme du langage en temps réel. Voici deux exemples de grammaires que j'ai rédigé :
 
@@ -97,7 +97,7 @@ FlSys_stFlLvl, C_FlSys_stFlLvl, LV_REQ_ES_AAS, LV_AAS_ACT
 \begin{lstlisting}[caption=Grammaire Check, numbers=none]
 checkFunc : Check OBracket Alias Equals (Real|Integer) (Coma (tolres|tolper))? CBracket;
 \end{lstlisting}
-Dans la partie gauche de cette expression, nous avons le nom du \textit{token}, sur la partie droite sa définition. Les mots commençant par une majuscule sont des constante se rapportant à un caractère, le pipe \texttt{|} signifie un <<ou>>, et le point d'interrogation \texttt{?} signifie que l'expression le précédant est facultative, quant-au mots commençant par une majuscule, ce sont des mots se rapportant à la définition d'un autre token, en l'occurrence ici à la définition de \texttt{tolres} et \texttt{tolper}. Ainsi le diagramme de cette expression est le suivant : 
+Dans la partie gauche de cette expression, nous avons le nom du \textit{token}, sur la partie droite sa définition. Les mots commençant par une majuscule sont des constante se rapportant à un caractère, le pipe \texttt{|} signifie un <<ou>>, et le point d'interrogation \texttt{?} signifie que l'expression le précédant est facultative, quant-au mots commençant par une minuscule, ce sont des mots se rapportant à la définition d'un autre \textit{token}, en l'occurrence ici à la définition de \texttt{tolres} et \texttt{tolper}. Ainsi le diagramme de cette expression est le suivant : 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=18cm]{contents/images/check.png}
@@ -160,10 +160,10 @@ Pour cela, nous avons utilisés plusieurs stratagèmes, tout d'abord l'utilisati
 
 Une fois le parsing de l'intégralité des variables du \textit{Walkthrough} effectué, si au moins une ligne n'a pas pu être parsé, une exception est retourné contenant le message de toutes les erreurs trouvés durant ce parsing, toutes les lignes n'ayant pas obtenu d'erreur sont tout de même générés.
 
-J'ai également mis en place un système de log avec \texttt{log4j} qui permet d'afficher proprement des messages de logs et de gérer la sévérité. Si une exception de parsing est renvoyée, celle-ci sera affiché dans la sortie standard, et dans le fichier de log.
+J'ai également mis en place un système de log avec \texttt{log4j} qui permet d'afficher proprement des messages de logs et de gérer la sévérité. Si une exception de parsing est renvoyée, celle-ci sera affichée dans la sortie standard, et dans le fichier de log.
 
 Nous pouvons les dissocier en deux types d'exceptions : les erreurs de syntaxe et les erreurs d'Alias. 
-\paragraph{Erreurs de syntaxe} Ces erreurs sont en partie gérer par Antlr, c'est purement syntaxique tel que l'oubli d'un caractère, cependant les erreurs Antlr n'étant pas clair, j'ai surchargé leurs méthodes d'affichage d'une part, afin d'avoir un affichage comme montré ci-dessous, mais j'ai également surchargé leurs gestionnaires afin de renvoyer une exception, ce qui n'était pas fait précédemment. L'envoie d'une exception permet de traiter le problème plus haut. 
+\paragraph{Erreurs de syntaxe} Ces erreurs sont en partie gérer par Antlr, c'est purement syntaxique tel que l'oubli d'un caractère, cependant les erreurs Antlr n'étant pas clair, j'ai surchargé leurs méthodes d'affichage d'une part, afin d'avoir un affichage comme montré ci-dessous, mais j'ai également surchargé leurs gestionnaires afin de renvoyer une exception, ce qui n'était pas fait précédemment. L'envoie d'une exception permet de traiter le problème plus haut : c'est le \texttt{TestManager} qui la traitera.
 \begin{lstlisting}[caption=Affichage d'une erreur de syntaxe, numbers=none]
 line 34:10 mismatched input '0' expecting ';'
 HIL_VB  0;

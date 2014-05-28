@@ -6,7 +6,7 @@
 
 		\begin{description} 
 			\item[Nom de la variable] Le nom de la variable testé : il existe un nom court et un nom long.
-			\item[Informations aidant à la conversion des données] Certains devices tel que le débugger ne fonctionne qu'avec des valeurs Hexadécimales. \'A' la charge de \textit{GreenT} de convertir ces données vers des valeurs physiques exploitables par le testeur
+			\item[Informations aidant à la conversion des données] Certains devices tel que le debugger ne fonctionne qu'avec des valeurs Hexadécimales. À la charge de \textit{GreenT} de convertir ces données vers des valeurs physiques exploitables par le testeur
 			\item[Nécessité d'un test automatique] un \texttt{GreenTTest} ne sera généré que si la colonne vaut \textit{Yes}.
 			\item[Statut du test] Nous éditerons cette colonne afin de reporter le statut du test.
 			\item[Precondition (cf section \ref{stim})] Contient un scénario d'initialisation du workbench : tension de départ, lancement du debugger, \ldots
@@ -24,9 +24,9 @@
 		\end{figure}
 
 	\subsection{Fonctionnalités principales}
-	Le développement de \textit{GreenT} va inclure un certains nombre de fonctionnalités attendu par le client et indispensable à son fonctionnement. D'autres fonctionnalités pourront apparaître plus tard, ainsi les fonctionnalités développées pourront être adaptées.
+	Le développement de \textit{GreenT} va inclure un certains nombre de fonctionnalités attendues par le client et indispensable à son fonctionnement. D'autres fonctionnalités pourront apparaître plus tard, ainsi les fonctionnalités développées pourront être adaptées.
 
-	L'interaction entre les différents modules de \textit{GreenT} est schématisée figure \ref{fig:generalDig}
+	Les interactions entre les différents modules de \textit{GreenT} sont schématisées figure \ref{fig:generalDig}
 
 	\subsubsection{Parsing et Génération}\label{generation}
 	Le but premier de la plateforme est d'effectuer des tests automatiques, il est ainsi indispensable d'avoir un système d'automatisation.
@@ -50,9 +50,9 @@
 		Les alias en écriture sont répartis en 2 types : les alias HIL et les alias Debugger, car ils n'ont pas les même méthodes : il est possible de faire un set hexadécimal sur un debugger, contrairement à un HIL qui lui permet d'effectuer un set électrique. 
 
 	\subsubsection{Stimulation} \label{stim}
-		Un test possèdera tout d'abord un scénario de pré condition : celui-ci est nécessaire afin d'initialiser les devices, en initialisant des valeurs, démarrant le débugger, etc\ldots Ceci afin que les résultats des tests soit cohérents.
+		Un test possèdera tout d'abord un scénario de pré condition : celui-ci est nécessaire afin d'initialiser les devices, en initialisant des valeurs, démarrant le debugger, etc\ldots Ceci afin que les résultats des tests soit cohérents.
 
-		Celui-ci possédera également un certain nombre de scénarios de stimulations. Ceux-ci sont des scénarios destinés à effectuer des actions pour mettre le contrôleur en condition, afin de vérifier que le fonctionnement est bien celui attendu. Durant les scénarios de stimulations, des variables sont enregistrés, c'est une fois les stimulations exécutés que l'on peut vérifier que tout s'est passé correctement. Avant chaque execution de stimulation, le scénario de pré-condition est lancée afin de retourner dans un état cohérent.
+		Celui-ci possédera également un certain nombre de scénarios de stimulations. Ceux-ci sont des scénarios destinés à effectuer des actions pour mettre le contrôleur en condition, afin de vérifier que le fonctionnement est bien celui attendu. Durant les scénarios de stimulations, des variables sont enregistrés, c'est une fois les stimulations exécutés que l'on peut vérifier si le test passe ou non. Avant chaque execution de stimulation, le scénario de pré-condition est lancée afin de revenir dans un état cohérent.
 
 	\subsubsection{Les traces et leurs évaluations}\label{expectedBehavior}
 	Lorsqu'un scénario de stimulation s'exécute, un certain nombre de variables doivent être enregistrées : ces variables sont stockées sous la forme d'une trace au format CSV, qui pourra plus tard être représenté sous forme de courbe. 
@@ -62,13 +62,13 @@
 	\subsubsection{Le TestManager}\label{testManager}
 	Le TestManager est le chef d'orchestre de \textit{GreenT}, il a donc un certain nombre de responsabilités. 
 
-	Il va d'abord organiser les différents tests en un concept que nous avons appelés \textit{Bundle} : Afin de limiter le temps d'exécution qui atteindra plusieurs dizaines d'heures, il est intéressant de regrouper les tests possédant les mêmes scénarios de stimulations et les mêmes pré conditions : seuls leur \textit{Expected Behavior} change, mais celles-ci pourront donc être évalués sur la même Trace.
+	Il va d'abord organiser les différents tests en un concept que nous avons appelé \textit{Bundle} : Afin de limiter le temps d'exécution qui atteindra plusieurs dizaines d'heures, il est intéressant de regrouper les tests possédant les mêmes scénarios de stimulations et les mêmes pré conditions : seuls leur \textit{Expected Behavior} change, mais celles-ci pourront être évaluées sur la même Trace.
 
 	Une fois les tests organisés en Bundle, il va les compiler et les donner à un \texttt{WorkbenchManager} : toujours pour une raison d'optimisation, il sera intéressant de pouvoir exécuter les enregistrements sur plusieurs bancs simultanément, pour cela le \texttt{TestManager} sera capable de savoir quels bancs peuvent être utilisés et pourra distribuer ses bundles en fonction. 
 
 	Chaque WorkbenchManager sera en charge d'exécuter le code généré plus tôt et dialoguera en réseau avec son banc, une fois l'exécution terminée, il obtiendra une trace qui pourra être évaluée.
 
-	Afin d'être le plus souple possible, il existera plusieurs modes d'exécution du \texttt{TestManager} : 
+	Afin d'être le plus souple possible, il existe plusieurs modes d'exécution du \texttt{TestManager} : 
 	\begin{description}
 		\item[Check only] Essaye de parser les différents fichiers, et vérifie que ceux-ci ne comporte aucune erreur de grammaire, d'alias introuvable, d'écriture sur un alias en lecture seule etc...
 		\item[Parse and generate jar tests] Parse les fichiers et génère des jars exécutables pour chacun des tests
