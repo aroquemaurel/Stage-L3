@@ -17,7 +17,7 @@
 \contentsline {section}{\numberline {3.1}Les tests}{15}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Le plugin}{15}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}La TA3}{16}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}La solution : \textit {\textit {GreenT}}}{17}{section.3.2}
+\contentsline {section}{\numberline {3.2}La solution : \textit {GreenT}}{17}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}G\IeC {\'e}n\IeC {\'e}ration de tests automatiques}{17}{subsection.3.2.1}
 \contentsline {subsubsection}{Les tests d'int\IeC {\'e}gration du plugin Ford}{17}{section*.3}
 \contentsline {subsubsection}{Les autres projets}{17}{section*.4}
@@ -51,7 +51,7 @@
 \contentsline {paragraph}{Erreurs de syntaxe}{29}{section*.20}
 \contentsline {paragraph}{Erreurs d'alias}{29}{lstnumber.4.8.3}
 \contentsline {section}{\numberline {4.3}Le g\IeC {\'e}n\IeC {\'e}rateur}{29}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}G\IeC {\'e}n\IeC {\'e}ration des tests}{29}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}G\IeC {\'e}n\IeC {\'e}ration des tests}{30}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Le moteur de template : freemarker}{30}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}L'analyse des traces et la prononciation du verdict}{31}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Arbre de l'expectedBehavior}{31}{subsection.4.4.1}

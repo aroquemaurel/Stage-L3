@@ -1,11 +1,15 @@
 \chapter{Organisation du travail}
 \section{L'équipe de développement}
-Nous sommes 3 développeurs dans cet équipe, Alain \bsc{Fernandez} le chef d'équipe, qui nous suivait et nous aidait à planifier, organisait les réunions, tout en développant les tests managers\footnote{Cf \ref{testManager}}. Olivier \bsc{Ramel} sous-traitant travaillant chez SII, affecté à ce projet et développant particulièrement la partie Serveur. Et moi même, stagiaire, s'occupant de la partie parsing et génération\footnote{Cf \ref{generation}}. Alain et Olivier avaient commencé la conception du logiciel avant mon arrivée, ils m'ont formé et expliqué tous les deux afin que je puisse rapidement les aider.
+Au cours de mon stage, trois développeurs travaillaient sur le projet \textit{GreenT} : Alain \bsc{Fernandez}, chef d’équipe et membre de l’équipe Vérification et Validation, Olivier \bsc{Ramel}, sous-traitant de chez SII, et moi-même, stagiaire au sein de l’équipe Vérification et Validation.
 
-Peu de temps après mon arrivé, nous avons fixés une réunion hebdomadaire tous les lundis matins afin d'expliquer nos différents avancements ou problèmes, ce qui permettait de régler ces derniers, et de ce projeter. Cela ne nous a pas empêché d'effectuer un certain nombre de réunions ponctuels pour continuer les points de conceptions n'ayant pas été terminés, ou les différents problèmes que nous avons rencontrés durant le développement nous obligeant à revoir certaines parties de la conception.
+En tant que chef d’équipe, Alain \bsc{Fernandez} organisait les réunions et supervisait notre travail tout en développant les tests managers\footnote{Cf \ref{testManager}}. Olivier \bsc{Ramel} se chargeait particulièrement de la partie serveur. Quant à moi je m’occupais de la partie parsing et génération\footnote{Cf \ref{generation}}.
+
+À mon arrivée la conception du logiciel avait été commencée par mes deux collègues qui m’ont tous les deux formé afin que je puisse rapidement être opérationnel.
+
+Ensemble nous avons convenu d’une réunion hebdomadaire tous les lundis matin afin de pouvoir faire un point sur nos avancements ou problèmes. Cela nous a permis d’avoir toujours une bonne vision du projet et de régler, ensemble, les problèmes au fur et à mesure. Pour autant, des réunions ponctuelles ont dû être organisées pour compléter ou revoir la conception en fonction des difficultés rencontrées durant la phase de développement.
 
 \section{Documentation}
-Lorsque nous fixons des choix de conceptions ou des choix au niveau des besoins du client, nous notions tout dans un document au format Word. Ainsi toutes les traces de nos réunions et de notre conception est accessible sur un disque réseau ce qui permet à l'équipe de lire ce qu'on avait dit plusieurs semaines avant, et de tenir au courant les autres.
+Une documentation, compte rendu des besoins du client et de tous nos choix de conceptions, a été mise en place au travers d’un document au format Word. Ainsi une trace de toutes nos réunions et de notre conception est accessible sur un disque réseau. Elle permet à l’équipe de consulter les détails ce qui avait été décidé plusieurs semaines auparavant.
 
 \section{Outils de développement}
 Afin de travailler de façon efficace, nous avons utilisés des outils aidant au développement.
@@ -27,16 +31,16 @@ De plus, à chaque fois que nous effectuons une modification, nous faisions un <
 \begin{wrapfigure}{l}{2.5cm}
 	\includegraphics[width=2.5cm]{contents/images/logoEclipse.png}
 \end{wrapfigure}
-Nous développions tous sous l'IDE\footnote{Integrated Development Tools} Eclipse Kepler, avec le plugin Git et le plugin Python. Le plugin Git pour avoir des outils aidant à résoudre les conflits éventuels que nous avons rencontrés, et le plugin Python permet de développer avec l'interpréteur et la coloration syntaxique Python. Je ne m'en suis que rarement servi, mais il était indispensable pour développer la partie serveur de notre plateforme, qui fonctionne en Python.
+Nous développions tous sous l'IDE\footnote{Integrated Development Tools} Eclipse Kepler, avec le plugin Git et le plugin PyDev. Le plugin Git permet d’avoir des outils aidant à la résolution d’éventuels conflits et le plugin PyDev permet de développer avec l’interpréteur et la coloration syntaxique Python. Je me suis rarement servi de ce dernier, mais il était indispensable pour développer la partie serveur de notre plateforme, qui fonctionne en Python. 
 
-Nous n'avons pas utilisé d'autres plugins, afin de rester avec une version simple nous permettant de développer facilement et sans problème.
+Nous n’avons pas utilisé d’autres plugins afin de rester avec une version simple d’Eclipse nous permettant de développer facilement et sans problème.
 
 \begin{wrapfigure}{r}{2.5cm}
 	\includegraphics[width=2.5cm]{contents/images/logoEnterpriseArchitect.png}
 \end{wrapfigure}
-Nous avons travaillé avec la norme UML\footnote{Unified Modelling Language} 2 afin de concevoir la plateforme, en utilisant particulièrement des diagrammes de classes, mais aussi des diagrammes de cas d'utilisations ou d'activité. 
+Nous avons travaillé avec la norme UML\footnote{Unified Modelling Language}~2 afin de concevoir la plateforme, en utilisant particulièrement des diagrammes de classes, mais aussi des diagrammes de cas d'utilisations ou d'activité. 
 
-Pour dessiner ces diagrammes, et les noter dans la documentation, nous les pensions d'abord sur tableau blanc, mais ensuite nous avions besoin d'un outil puissant afin de les dessiner sur informatique. Pour cela nous avons utilisés Enterprise Architect, un logiciel propriétaire permettant de créer tous les diagrammes de la norme UML2.\\~
+Pour dessiner ces diagrammes, et les noter dans la documentation, nous les pensions d'abord sur tableau blanc, mais ensuite nous avions besoin d'un outil puissant afin de les dessiner sur informatique. Pour cela nous avons utilisés Enterprise Architect, un logiciel propriétaire permettant de créer tous les diagrammes de la norme UML~2.\\~
 
 \begin{wrapfigure}{l}{2.5cm}
 	\includegraphics[width=2.5cm]{contents/images/logoLatex.png}
