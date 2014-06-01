@@ -163,7 +163,7 @@ Une fois le parsing de l'intégralité des variables du \textit{Walkthrough} eff
 J'ai également mis en place un système de log avec \texttt{log4j} qui permet d'afficher proprement des messages de logs et de gérer la sévérité. Si une exception de parsing est renvoyée, celle-ci sera affichée dans la sortie standard, et dans le fichier de log.
 
 Nous pouvons les dissocier en deux types d'exceptions : les erreurs de syntaxe et les erreurs d'Alias. 
-\paragraph{Erreurs de syntaxe} Ces erreurs sont en partie gérer par Antlr, c'est purement syntaxique tel que l'oubli d'un caractère, cependant les erreurs Antlr n'étant pas clair, j'ai surchargé leurs méthodes d'affichage d'une part, afin d'avoir un affichage comme montré ci-dessous, mais j'ai également surchargé leurs gestionnaires afin de renvoyer une exception, ce qui n'était pas fait précédemment. L'envoie d'une exception permet de traiter le problème plus haut : c'est le \texttt{TestManager} qui la traitera.
+\paragraph{Erreurs de syntaxe} Ces erreurs sont en partie gérées par Antlr, c'est purement syntaxique tel que l'oubli d'un caractère, cependant les erreurs Antlr n'étant pas clair, j'ai surchargé leurs méthodes d'affichage d'une part, afin d'avoir un affichage comme montré ci-dessous, mais j'ai également surchargé leurs gestionnaires afin de renvoyer une exception, ce qui n'était pas fait précédemment. L'envoie d'une exception permet de traiter le problème plus haut : c'est le \texttt{TestManager} qui la traitera.
 \begin{lstlisting}[caption=Affichage d'une erreur de syntaxe, numbers=none]
 line 34:10 mismatched input '0' expecting ';'
 HIL_VB  0;

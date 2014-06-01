@@ -18,7 +18,7 @@
 		\end{wrapfigure}
 		Les classes que je génères ont un gabarit commun, seul l'implémentation des méthodes changent, ainsi plutôt que réécrire systématiquement tout le corps de la classe, il parraissait intéressant d'avoir un moteur de \textit{template}, j'ai choisi FreeMarker.
 
-		J'ai un fichier gabarit utilisant le format FreeMarker, avec dedans des appels d'objet. Lors de la sérialisation, je fournis à FreeMarker les objets concernés, l'adresse du gabarit et c'est lui qui écrira le fichier \texttt{.java}.
+		J'ai développé un fichier gabarait utilisant le format FreeMarker, à l'interieur de ce gabarit, j'utilise des objets. Lors de la sérialisation, je fournis les valeurs des objets concernés, l'adresse du gabarit, le fichier \texttt{.java} est ensuite généré par FreeMarker.
 
 		Deux fichiers de templates ont été nécessaires : un pour les stim, et un pour le \textit{GreenTTest}. En effet un precondstim et un stimscenario n'ont que peu de différence, il était donc possible de les regrouper avec le même template.
 

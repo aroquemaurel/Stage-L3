@@ -50,9 +50,11 @@
 		Les alias en écriture sont répartis en deux types : les alias HIL et les alias Debugger, car ils n'ont pas les même méthodes : il est possible de faire un set hexadécimal sur un debugger, contrairement à un HIL qui lui permet d'effectuer un set électrique. 
 
 	\subsubsection{Stimulation} \label{stim}
-		Un test possèdera tout d'abord un scénario de pré condition : celui-ci est nécessaire afin d'initialiser les devices, en initialisant des valeurs, démarrant le debugger, etc\ldots Ceci afin que les résultats des tests soient cohérents.
+		Afin de tester une variable du plugin, les développeurs vont utiliser des alias présents sur un équipement\footnote{De l'anglais \textit{Device}} : actuellement, un HIL ou un debugger, prochainement nous pourrions en utiliser d'autres que ces deux derniers.
 
-		Celui-ci possédera également un certain nombre de scénarios de stimulations. Ceux-ci sont des scénarios destinés à effectuer des actions pour mettre le contrôleur en condition, afin de vérifier que le fonctionnement est bien celui attendu. Durant les scénarios de stimulations, des variables sont enregistrées, c'est une fois les stimulations exécutées que l'on peut vérifier si le test passe ou non. Avant chaque execution de stimulation, le scénario de pré-condition est lancé afin de revenir dans un état cohérent.
+		Le spécifieur va rédiger des scénarios de stimulation, ceci afin de mettre le contrôleur dans certaines conditions. Son but sera ensuite de vérifier que ces variables restent cohérentes vis-à-vis du scénario effectué. 
+
+		Un scénario particulier doit être spécifié : une pré condition qui a pour but d'initialiser les \textit{devices} et certains alias afin d'avoir un état de stimulation qui soit cohérent et identique à chaque lancement du scénario. Ce scénario sera effectué avant le lancement de chacun des scénarios de stimulation.
 
 	\subsubsection{Les traces et leurs évaluations}\label{expectedBehavior}
 	Lorsqu'un scénario de stimulation s'exécute, un certain nombre de variables doivent être enregistrées : ces variables sont stockées sous la forme d'une trace au format CSV, qui pourra plus tard être représentée sous forme de courbe. 
@@ -96,7 +98,7 @@
 	\subsubsection{Schéma de fonctionnement global}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=16.5cm]{contents/images/generalDiag.eps}
+			\includegraphics[width=15.5cm]{contents/images/generalDiag.eps}
 			\caption{Fonctionnement général du parser \textit{GreenT}}
 			\label{fig:generalDig}
 		\end{figure}

@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {3.2.1}G\IeC {\'e}n\IeC {\'e}ration de tests automatiques}{17}{subsection.3.2.1}
 \contentsline {subsubsection}{Les tests d'int\IeC {\'e}gration du plugin Ford}{17}{section*.3}
 \contentsline {subsubsection}{Les autres projets}{17}{section*.4}
-\contentsline {subsection}{\numberline {3.2.2}L'utilisation de \textit {GreenT} comme une biblioth\IeC {\`e}que}{18}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}L'utilisation de \textit {GreenT} comme une biblioth\IeC {\`e}que}{17}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}L'ex\IeC {\'e}cution des tests}{18}{subsection.3.2.3}
 \contentsline {chapter}{\numberline {4}D\IeC {\'e}veloppement de \textit {\textit {GreenT}}}{19}{chapter.4}
 \contentsline {section}{\numberline {4.1}Fonctionnement g\IeC {\'e}n\IeC {\'e}ral}{19}{section.4.1}

@@ -9,8 +9,8 @@
 
 	Trois problèmes se posent à cette méthode : 
 	\begin{description}
-		\item[La fiabilité des tests] Rien ne nous garanti qu'une variable ne va pas être impactée par une modification, un problème peut donc passer à côté du test.
-		\item[Le temps de tests] Même en ne testant qu'une partie des variables, cela prend un temps considérable, il faut compter environ une semaine pour tester ce qu'il faut, sans compter le fait qu'une tâche répétitive peut entrainer des erreurs d'inattention.
+		\item[La fiabilité des tests] Le test des seules différences ne permet pas nécessairement de détecter tous les problèmes (notamment avec des effets de bords…). De plus, une tâche répétitive peut entrainer des erreurs humaines.
+		\item[Le temps de tests] Même en ne testant qu'une partie des variables, cela prend un temps considérable, il faut compter environ une semaine.
 		\item[La disponibilité des bancs de tests]	Les tests s'effectuent sur des bancs de tests\footnote{Une photo d'un banc est disponible figure \ref{fig:photoHil}}, ces équipements permettent de simuler un environnement voiture autour du contrôleur moteur\footnote{Tel que l'utilisation de la clé de démarrage, la tension de la batterie, la vitesse de rotation du moteur, ...} Or ces bancs de tests sont peut nombreux dans l'entreprise, en raison de leur coût. Il est donc nécessaire de réserver les bancs pendant une semaine afin d'effectuer les tests, cela peut bloquer d'autres personnes en ayant besoin.
 	\end{description}
 	\begin{figure}[H]
@@ -22,7 +22,7 @@
 
 
 	\subsection{La TA3}
-	Actuellement, afin de tester, les équipes de tests disposent d'une plateforme appelée TA3. Cette plateforme leur permet de dialoguer avec des contrôleurs embarqués dans des simulateurs d'environnement\footnote{Hardware In the Loop (HIL) par exemple} et le debugger, et ainsi d'effectuer des scripts de tests en Python.
+	Actuellement, les équipes de tests disposent d'une plateforme appelée TA3. Celle-ci est une bibliothèque de classes écrites en Python. Jusqu'à présent, pour chaque objectif de test, il fallait écrire un script python utilisant la TA3. Ces scripts pilotent le Hil et le l'outil de debug afin d'envoyer des stimulis à l'ECU et de vérifier que les réactions de celui-ci sont conforme aux spécifications de test.
 	\begin{figure}[H]		
 		\centering
 		\includegraphics[width=7cm]{contents/images/trace32.png}
@@ -30,14 +30,10 @@
 		\label{fig:photoHil}
 	\end{figure}
 
-	Cependant, cette plateforme pose un certain nombre de problèmes qui rend son utilisation difficile.
-	\begin{description}
-		\item[Problème de temps réel] Un certain nombre de calculs à des fins de tests sont effectués par le calculateur, ainsi les tests peuvent être faussés car le calculateur n'est pas en conditions réélles mais utilise une partie de sa charge afin de tester.
-		\item[Mauvaise gestion des exceptions] Un autre problème récurrent, est la gestion des exceptions et erreurs de scripts. Cette plateforme utilise python et est donc interprétée. Certaines erreurs de syntaxe ne sont détectées qu'à l'exécution : éventuellement plusieurs minutes après avoir écrit le test. D'autre part, certaines erreurs sont inexplicables.
-		\item[Bugs] Enfin, celle-ci est buggé, il peut arriver qu'elle renvoi des faux positifs, faisant perdre un temps considérable.
-	\end{description}
-~\\
-	Il est donc extrêmement difficile de tester dans ces conditions, et la TA3 ayant été mal conçue, il est compliqué de la modifier ou de la faire évoluer. En effet, le résultat serait une plateforme toujours instable, ou alors passer énormément de temps pour un résultat qui ne serait pas parfait : une nouvelle solution partant de zéro afin d'effectuer des tests fiables, simplement et efficacement semble nécessaire.
+	Cependant, cette plateforme pose un certain nombre de problèmes qui rend son utilisation difficile. D'une part, elle renvoie un trop grand pourcentage de faux-positifs, faisant perdre un temps considérable. D'autres part, elle ne prend pas en compte certains besoins apparu récemments. \footnote{Comme par exemple un système permettant de flasher automatiquement les ECU, ou la possibilité de vérifier la récurrences de productions de variables}
+\\~
+
+	Afin d'améliorer cette situation, l'équipe Vérification et Validation a décidé de développer une nouvelle plateforme.
 
 	\section{La solution : \textit{GreenT}}
 	Afin de résoudre les problèmes vus section \ref{pbTests}, une solution a été pensée avant mon arrivée en étudiant les besoins de l'équipe en charge des tests du plugin : le développement d'une plateforme de tests, appelé \textit{GreenT}.
