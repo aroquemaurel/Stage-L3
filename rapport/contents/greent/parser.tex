@@ -1,12 +1,12 @@
 	\section{Le parser}\label{sectionParser}
-	Avant mon arrivée, le client et l'équipe avait conçu une grammaire de langage permettant de spécifier le fonctionnement du test, afin d'effectuer un scénario de stimulation ou une \textit{Expected Behavior} il faut respecter une syntaxe précise, dans le cas contraire une exception est levée.
+	Avant mon arrivée, le client et l'équipe avaient conçu une grammaire de langage permettant de spécifier le fonctionnement du test, afin d'effectuer un scénario de stimulation ou une \textit{Expected Behavior} il faut respecter une syntaxe précise, dans le cas contraire une exception est levée.
 
 	\subsection{La grammaire}\label{specParser}
 	\subsubsection{Les scénarios de stimulations}
 	Un \textit{precondstim} peut contenir des affectations, des \textit{check} et des actions débugger : 
 	\begin{description}
 		\item[Affectation] Une affectation s'effectue de la façon suivante : \texttt{Alias = valeur}, l'alias \texttt{Alias} possédera ensuite la valeur \texttt{valeur}.
-		\item[Check] Cette action permet de vérifier qu'un alias possède bien la valeur espérée, à une tolérance prêt. Dans le cas contraire le bundle ne pourra pas être exécuté et une exception sera levée. Cela s'effectue ainsi : \texttt{CHECK(Alias = Valeur, TOLRES(tolerance))}, la tolerance étant facultative.
+		\item[Check] Cette action permet de vérifier qu'un alias possède bien la valeur espérée, à une tolérance prés. Dans le cas contraire le bundle ne pourra pas être exécuté et une exception sera levée. Cela s'effectue ainsi : \texttt{CHECK(Alias = Valeur, TOLRES(tolerance))}, la tolerance étant facultative.
 		\item[Actions débugger] Il est actuellement possible d'effectuer deux actions : démarrer le debugger, ou l'arrêter : \texttt{T32\_GO} et 
 		\texttt{T32\_CPU\_STOP}.
 	\end{description}
@@ -81,6 +81,7 @@ Il est possible de fournir des variables à enregistrer en plus de celle présen
 FlSys_stFlLvl, C_FlSys_stFlLvl, LV_REQ_ES_AAS, LV_AAS_ACT
 \end{lstlisting}
 
+
 	\subsection{Implémentation du parser}
 		\subsubsection{La grammaire : utilisation de Antlr}
 		\begin{wrapfigure}{r}{3cm}
@@ -89,15 +90,18 @@ FlSys_stFlLvl, C_FlSys_stFlLvl, LV_REQ_ES_AAS, LV_AAS_ACT
 		J'étais en charge d'écrire le parser spécifié dans la section \ref{specParser}. Comme nous l'avons vu, celui-ci intègre beaucoup de grammaires différentes, notamment celle des \textit{Expected Behavior} qui est assez complexe. \\
 		Une solution a été choisie afin d'optimiser au maximum le temps de développement et de limiter les erreurs : utilisation de Antlr\footnote{ANother Tool for Laguage Recognition}.
 
-		Antlr est un framework libre de construction d'interpreteurs, il prend en entrée une grammaire, définissant notre langage à reconnaître et produit automatiquement le code Java permettant de reconnaître ce langage, ceci en parcourant l'arbre syntaxique. Il ne nous est donc plus nécessaire d'effectuer cette partie du travail, il faut simplement que nous effectuons les bonnes actions en fonction de notre emplacement dans l'arbre.
+		Antlr est un framework libre de construction d'interpreteurs, il prend en entrée une grammaire, définissant notre langage à reconnaître et produit
+		automatiquement le code Java permettant de reconnaître ce langage, ceci en parcourant l'arbre syntaxique. Il ne nous est donc plus nécessaire d'effectuer
+		cette partie du travail, il faut simplement que nous effectuions les bonnes actions en fonction de notre emplacement dans l'arbre.
 
-		Antlr à une syntaxe très simple pour définir une grammaire, il est nécessaire de déclarer tous nos mots clé tel que \texttt{if}, \texttt{check}, mais aussi les caractères utilisés dans le langage tel que \texttt{(, ), {; }} où simplement le retour chariot\footnote{Celui-ci correspondant à \texttt{\textbackslash n} ou \texttt{\textbackslash  n\textbackslash r} sous Windows}. Une fois que nos mots clés sont déclarés, il est possible de construire nos grammaires : pour cela, Antlr possède un outil de conception de grammaire, celui-ci a la particularité de construire le diagramme du langage en temps réel. Voici deux exemples de grammaires que j'ai rédigé :
+		Antlr à une syntaxe très simple pour définir une grammaire, il est nécessaire de déclarer tous nos mots clés tels que \texttt{if}, \texttt{check}, mais aussi les caractères utilisés dans le langage tel que \texttt{(, ), {; }} où simplement le retour chariot\footnote{Celui-ci correspondant à \texttt{\textbackslash n} ou \texttt{\textbackslash  n\textbackslash r} sous Windows}. Une fois que nos mots clés sont déclarés, il est possible de construire nos grammaires : pour cela, Antlr possède un outil de conception de grammaire, celui-ci a la particularité de construire le diagramme du langage en temps réel. Voici deux exemples de grammaires que j'ai rédigé :
 
 		\paragraph{Grammaire du Check}~\\
 \begin{lstlisting}[caption=Grammaire Check, numbers=none]
 checkFunc : Check OBracket Alias Equals (Real|Integer) (Coma (tolres|tolper))? CBracket;
 \end{lstlisting}
-Dans la partie gauche de cette expression, nous avons le nom du \textit{token}, sur la partie droite sa définition. Les mots commençant par une majuscule sont des constante se rapportant à un caractère, le pipe \texttt{|} signifie un <<ou>>, et le point d'interrogation \texttt{?} signifie que l'expression le précédant est facultative, quant-au mots commençant par une minuscule, ce sont des mots se rapportant à la définition d'un autre \textit{token}, en l'occurrence ici à la définition de \texttt{tolres} et \texttt{tolper}. Ainsi le diagramme de cette expression est le suivant : 
+Dans la partie gauche de cette expression, nous avons le nom du \textit{token}, sur la partie droite sa définition. Les mots commençant par une majuscule sont
+des constantes se rapportant à un caractère, le pipe \texttt{|} signifie un <<ou>>, et le point d'interrogation \texttt{?} signifie que l'expression le précédant est facultative, quant-au mots commençant par une minuscule, ce sont des mots se rapportant à la définition d'un autre \textit{token}, en l'occurrence ici à la définition de \texttt{tolres} et \texttt{tolper}. Ainsi le diagramme de cette expression est le suivant : 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=18cm]{contents/images/check.png}
@@ -115,7 +119,8 @@ ExpectedBehavior: NewLine?((
                   | eval+)
                   NewLine?;
 \end{lstlisting}
-Le caractère plus \texttt{+} qui n'était pas présent précédemment représente la répétition de l'expression le précédent. Il est ainsi possible d'effectuer n'importe quel grammaire avec ces caractères de base. Comme nous pouvons le voir, la grammaire est récursive. Son diagramme syntaxique est présent figure \ref{fig:diagSynEB}.
+Le caractère plus \texttt{+} qui n'était pas présent précédemment représente la répétition de l'expression le précédent. Il est ainsi possible d'effectuer
+n'importe quelle grammaire avec ces caractères de base. Comme nous pouvons le voir, la grammaire est récursive. Son diagramme syntaxique est présent figure \ref{fig:diagSynEB}.
 \begin{figure}[H]
 	\centering
 		\hspace*{-40px}
@@ -130,11 +135,13 @@ Le diagramme devrait contenir des \texttt{Newline} facultatifs au début et à l
 Une fois toutes les grammaires construites avec l'intégralités des n\oe{}uds de l'arbre d'expression, il suffit de générer les fichiers java, et de parcourir l'arbre d'expression.
 
 	\subsubsection{La visite de l'arbre d'expression}
-	Antlr propose plusieurs méthodes afin de reconnaître notre langage, nous avons choisis d'utiliser les \textit{visitors}. Le concept est assez simple : Nous devons hériter d'une classe généré par Antlr, qui est nommée WalkthroughBaseVisitor\footnote{Walkthrough étant le nom du fichier contenant la grammaire antlr}, c'est une classe générique nécessitant un type, notre grammaire retournera des \texttt{String}, mais dans le cas d'un parser d'expression, il peut être intéressant de retourner des \texttt{Numbers}.
+	Antlr propose plusieurs méthodes afin de reconnaître notre langage, nous avons choisis d'utiliser les \textit{visitors}. Le concept est assez simple : Nous
+	devons hériter d'une classe générée par Antlr, qui est nommée WalkthroughBaseVisitor\footnote{Walkthrough étant le nom du fichier contenant la grammaire antlr}, c'est une classe générique nécessitant un type, notre grammaire retournera des \texttt{String}, mais dans le cas d'un parser d'expression, il peut être intéressant de retourner des \texttt{Numbers}.
 
-	Cette classe contient une méthode par token présente dans la grammaire, il est possibles de les surcharger afin d'effectuer nos actions : chacune de ces méthodes ont pour convention de commencer par \texttt{visit} suivis par le nom du token. Ces méthodes sont appelés à chaque fois que nous passons dans ce n\oe{}ud de l'arbre. Celles-ci contiennent en paramètre le n\oe{}ud où l'on se trouve, il est donc possible de chercher des nœuds fils si-besoin, et ensuite d'appeler la suite de l'évaluation de l'arbre. 
+	Cette classe contient une méthode par token présente dans la grammaire, il est possibles de les surcharger afin d'effectuer nos actions : chacune de ces
+	méthodes a pour convention de commencer par \texttt{visit} suivi par le nom du token. Ces méthodes sont appelées à chaque fois que nous passons dans ce n\oe{}ud de l'arbre. Celles-ci contiennent en paramètre le n\oe{}ud où l'on se trouve, il est donc possible de chercher des nœuds fils si-besoin, et ensuite d'appeler la suite de l'évaluation de l'arbre. 
 
-	J'ai surchargé les méthodes qui était intéressantes ici tel que \texttt{visitCheckFunc(CheckFuncContext ctx)} présenté ci-dessous, le code est commenté afin d'aider à sa compréhension.
+	J'ai surchargé les méthodes qui étaient intéressantes ici tel que \texttt{visitCheckFunc(CheckFuncContext ctx)} présenté ci-dessous, le code est commenté afin d'aider à sa compréhension.
 \begin{lstlisting}[language=Java, caption=Surcharge de \texttt{visitCheckFunc}]
 	@Override
 	public String visitCheckFunc(CheckFuncContext ctx) {
@@ -154,16 +161,18 @@ Une fois toutes les grammaires construites avec l'intégralités des n\oe{}uds d
 	}
 \end{lstlisting}
 		\subsubsection{La gestion des exceptions}
-\'Etant donné le temps d'exécution des tests\footnote{Environ une quinzaine d'heures}, il était nécessaire d'effectuer le maximum de vérification avant la phase d'exécution afin de ne pas avoir une erreur qui remonte au bout de plusieurs heures d'exécutions. 
+\'Etant donné le temps d'exécution des tests\footnote{Environ une quinzaine d'heures}, il était nécessaire d'effectuer le maximum de vérifications avant la phase d'exécution afin de ne pas avoir une erreur qui remonte au bout de plusieurs heures d'exécution. 
 
-Pour cela, nous avons utilisés plusieurs stratagèmes, tout d'abord l'utilisation d'un langage fortement typé tel que le Java, à l'opposé du Python utilisé sur la TA3, nous permet de générer du Java qui en cas d'erreur de type ne compilerait pas\footnote{Comme l'écriture sur un alias en lecture}, mais l'autre approche était l'utilisation des exceptions lors du parsing.
+Pour cela, nous avons utilisé plusieurs stratagèmes, tout d'abord l'utilisation d'un langage fortement typé tel que le Java, à l'opposé du Python utilisé sur la TA3, nous permet de générer du Java qui en cas d'erreur de type ne compilerait pas\footnote{Comme l'écriture sur un alias en lecture}, mais l'autre approche était l'utilisation des exceptions lors du parsing.
 
-Une fois le parsing de l'intégralité des variables du \textit{Walkthrough} effectué, si au moins une ligne n'a pas pu être parsé, une exception est retourné contenant le message de toutes les erreurs trouvés durant ce parsing, toutes les lignes n'ayant pas obtenu d'erreur sont tout de même générés.
+Une fois le parsing de l'intégralité des variables du \textit{Walkthrough} effectué, si au moins une ligne n'a pas pu être parsé, une exception est retournée
+contenant le message de toutes les erreurs trouvées durant ce parsing, toutes les lignes n'ayant pas obtenu d'erreur sont tout de même générés.
 
 J'ai également mis en place un système de log avec \texttt{log4j} qui permet d'afficher proprement des messages de logs et de gérer la sévérité. Si une exception de parsing est renvoyée, celle-ci sera affichée dans la sortie standard, et dans le fichier de log.
 
 Nous pouvons les dissocier en deux types d'exceptions : les erreurs de syntaxe et les erreurs d'Alias. 
-\paragraph{Erreurs de syntaxe} Ces erreurs sont en partie gérées par Antlr, c'est purement syntaxique tel que l'oubli d'un caractère, cependant les erreurs Antlr n'étant pas clair, j'ai surchargé leurs méthodes d'affichage d'une part, afin d'avoir un affichage comme montré ci-dessous, mais j'ai également surchargé leurs gestionnaires afin de renvoyer une exception, ce qui n'était pas fait précédemment. L'envoie d'une exception permet de traiter le problème plus haut : c'est le \texttt{TestManager} qui la traitera.
+\paragraph{Erreurs de syntaxe} Ces erreurs sont en partie gérées par Antlr, c'est purement syntaxique tel que l'oubli d'un caractère, cependant les erreurs Antlr
+n'étant pas claires, j'ai surchargé leurs méthodes d'affichage d'une part, afin d'avoir un affichage comme montré ci-dessous, mais j'ai également surchargé leurs gestionnaires afin de renvoyer une exception, ce qui n'était pas fait précédemment. L'envoi d'une exception permet de traiter le problème plus haut : c'est le \texttt{TestManager} qui la traitera.
 \begin{lstlisting}[caption=Affichage d'une erreur de syntaxe, numbers=none]
 line 34:10 mismatched input '0' expecting ';'
 HIL_VB  0;
@@ -183,4 +192,4 @@ Error: Alias unknown [HL_VSd, Alias, Test]
 Error: Alias not readable [HIL_VS, HIL_VB]
 Error: Alias not writable [HIL_VS_OUT, HIL_VB_OUT]
 \end{lstlisting}
-		
+	s	

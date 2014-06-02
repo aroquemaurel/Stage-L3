@@ -3,7 +3,7 @@
 	Comme expliqué dans la section \ref{besoinTests}, le calculateur moteur est un système critique, il est donc indispensable de tester correctement celui-ci.
 
 	\subsection{Le plugin}
-	Dans le cadre de projets pour Ford, Continental ne développe pas l'intégralité du calculateur, en effet une partie est fournie par le client sous forme de << plugin >>. Le plugin est supposé correct, et ce n'est pas de notre ressort de le tester. Cependant, celui-ci va être interfacé avec les logiciels Continental : il est indispensable de vérifier que les deux parties fonctionnent ensemble lors de l'intégration.
+	Dans le cadre de projets pour Ford, Continental ne développe pas l'intégralité du logiciel, en effet une partie est fournie par le client sous forme de << plugin >>. Le plugin est supposé correct, et ce n'est pas de notre ressort de le tester. Cependant, celui-ci va être interfacé avec les logiciels Continental : il est indispensable de vérifier que les deux parties fonctionnent ensemble lors de l'intégration.
 
 	Pour cela, le client fourni un fichier appelé \textit{Walkthrough}\footnote{Ce fichier est expliqué plus en détail section \ref{wt}} contenant la liste des variables du plugin avec toutes leur spécifications, ce fichier est au format Excel : environ 900 variables différentes. Il est impensable de tester le fonctionnement d'autant de paramètres manuellement, ainsi l'équipe en charge de tester cette intégration effectue des tests de différence d'une version à l'autre : seules les variables ayant pu être impactées par une \textit{release} seront testées, il est supposé que les autres resteront inchangées.
 
@@ -11,7 +11,7 @@
 	\begin{description}
 		\item[La fiabilité des tests] Le test des seules différences ne permet pas nécessairement de détecter tous les problèmes (notamment avec des effets de bords…). De plus, une tâche répétitive peut entrainer des erreurs humaines.
 		\item[Le temps de tests] Même en ne testant qu'une partie des variables, cela prend un temps considérable, il faut compter environ une semaine.
-		\item[La disponibilité des bancs de tests]	Les tests s'effectuent sur des bancs de tests\footnote{Une photo d'un banc est disponible figure \ref{fig:photoHil}}, ces équipements permettent de simuler un environnement voiture autour du contrôleur moteur\footnote{Tel que l'utilisation de la clé de démarrage, la tension de la batterie, la vitesse de rotation du moteur, ...} Or ces bancs de tests sont peut nombreux dans l'entreprise, en raison de leur coût. Il est donc nécessaire de réserver les bancs pendant une semaine afin d'effectuer les tests, cela peut bloquer d'autres personnes en ayant besoin.
+		\item[La disponibilité des bancs de tests]	Les tests s'effectuent sur des bancs de tests\footnote{Une photo d'un banc est disponible figure \ref{fig:photoHil}}, ces équipements permettent de simuler un environnement voiture autour du contrôleur moteur\footnote{Tel que l'utilisation de la clé de démarrage, la tension de la batterie, la vitesse de rotation du moteur, ...} Or ces bancs de tests sont peu nombreux dans l'entreprise, en raison de leur coût. Il est donc nécessaire de réserver les bancs pendant une semaine afin d'effectuer les tests, cela peut bloquer d'autres personnes en ayant besoin.
 	\end{description}
 	\begin{figure}[H]
 		\centering

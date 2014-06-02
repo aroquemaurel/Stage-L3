@@ -1,0 +1,129 @@
+
+\usepackage{ifthen}
+\date{\today}
+
+\chead{Antoine de \bsc{Roquemaurel}}
+\ifthenelse{\equal{\numero}{}}{
+}
+{
+	\rhead{\typeDoc~\no\numero}
+}
+\lhead{\titre}
+%\makeindex
+
+\lfoot{Université Toulouse III -- Paul Sabatier}
+\rfoot{\sigle\semestre}
+%\rfoot{}
+\cfoot{--~~\thepage~~--}
+
+\makeglossary
+\makeatletter
+\def\clap#1{\hbox to 0pt{\hss #1\hss}}%
+
+\def\haut#1#2#3{%
+	\hbox to \hsize{%
+		\rlap{\vtop{\raggedright #1}
+	}%
+	\hss
+	\clap{\vtop{\centering #2}
+}%
+\hss
+\llap{\vtop{\raggedleft #3}}}}%
+\def\bas#1#2#3{%
+	\hbox to \hsize{%
+		\rlap{\vbox{
+			\raggedright #1
+		}
+	}%
+	\hss \clap{\vbox{\centering #2}}%
+	\hss
+	\llap{\vbox{\raggedleft #3}}}
+}%
+\def\maketitle{%
+	\thispagestyle{empty}{%
+		\haut{}{\@blurb}{}
+		%	
+		%\vfill
+
+		\begin{center}
+			\vspace{-1.4cm}
+			\usefont{OT1}{ptm}{m}{n}
+			\Large \@type \@title\\
+			\normalsize
+			Antoine de \bsc{Roquemaurel} -- \today
+
+		\end{center}
+		\par
+		\hrule height 1pt
+		\par
+		\vspace{0.0cm}
+		\bas{}{}{}
+}%
+}
+\def\date#1{\def\@date{#1}}
+\def\author#1{\def\@author{#1}}
+\def\type#1{\def\@type{#1}}
+\def\title#1{\def\@title{#1}}
+\def\location#1{\def\@location{#1}}
+\def\blurb#1{\def\@blurb{#1}}
+\date{\today}
+\newboolean{monBool}
+\setboolean{monBool}{true}
+\author{}
+\title{}
+\ifthenelse{\equal{\numero}{}}{
+	\type{\typeDoc~}
+}
+{
+	\type{\typeDoc~\no\numero~--- }
+}
+\location{Amiens}\blurb{}
+%\makeatother
+\title{\titre}
+\author{%Semestre \semestre
+}
+
+\location{Toulouse}
+\blurb{%
+\vspace{-35px}
+\begin{tabular}{lr}
+	\begin{minipage}{0.47\textwidth}
+	Université Toulouse III -- Paul Sabatier\\
+	L3 Informatique Parcours ISI\\~\\
+	Tuteur universitaire : Joseph \bsc{Boudou}\\
+	\footnotesize
+	\Letter~\texttt{boudou@irit.fr}
+		\end{minipage}&
+		\begin{minipage}{0.5\textwidth}
+			\begin{flushright}
+	\large \textbf \module \\~\\
+	\vspace{8px}
+	\normalsize
+	Maître de stage : Stéphane \bsc{Bride}\\
+	\hspace{-50px}
+	\footnotesize
+	\texttt{stephane.bride@continental-corporation.com~\Letter}
+\end{flushright}
+		\end{minipage}
+\end{tabular}
+\begin{flushleft}
+\end{flushleft}
+\begin{flushright}
+	\vspace{-45px}
+\end{flushright}
+}%
+
+
+
+%\title{Cours \\ \titre}
+%\date{\today\\ Semestre \semestre}
+
+%\lhead{Cours: \titre}
+%\chead{}
+%\rhead{\thepage}
+
+%\lfoot{Université Paul Sabatier Toulouse III}
+%\cfoot{\thepage}
+%\rfoot{\sigle\semestre}
+
+\pagestyle{fancy}

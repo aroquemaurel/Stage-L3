@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.1)  29 MAY 2014 21:42
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.1)  2 JUN 2014 20:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1702,7 +1702,7 @@ LaTeX Font Warning: Font shape `T1/pag/bc/n' undefined
 File: contents/images/caConti.jpg Graphic file (type jpg)
 
 <use contents/images/caConti.jpg>
-Package pdftex.def Info: contents/images/caConti.jpg used on input line 8.
+Package pdftex.def Info: contents/images/caConti.jpg used on input line 10.
 (pdftex.def)             Requested size: 341.43306pt x 189.03978pt.
 
 <contents/images/repartitionConti.jpg, id=211, 907.13907pt x 520.19344pt>
@@ -1710,7 +1710,7 @@ File: contents/images/repartitionConti.jpg Graphic file (type jpg)
 
 <use contents/images/repartitionConti.jpg>
 Package pdftex.def Info: contents/images/repartitionConti.jpg used on input lin
-e 16.
+e 18.
 (pdftex.def)             Requested size: 369.88582pt x 212.10593pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1723,13 +1723,13 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.20 
+l.22 
       <./contents/images/caConti.jpg>]
 <contents/images/logo.jpg, id=227, 225.84375pt x 225.84375pt>
 File: contents/images/logo.jpg Graphic file (type jpg)
 
 <use contents/images/logo.jpg>
-Package pdftex.def Info: contents/images/logo.jpg used on input line 27.
+Package pdftex.def Info: contents/images/logo.jpg used on input line 29.
 (pdftex.def)             Requested size: 56.9055pt x 56.90533pt.
 
 
@@ -1743,14 +1743,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.42 E
+l.44 E
       n 2004, le plus grand spÃ©cialiste mondial de la technologie du caoutc...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.42 E
+l.44 E
       n 2004, le plus grand spÃ©cialiste mondial de la technologie du caoutc...
  <./contents/images/repartitionConti.jpg> <./contents/images/logo.jpg>]
 <contents/images/structureConti.jpg, id=235, 662.475pt x 501.875pt>
@@ -1758,10 +1758,10 @@ File: contents/images/structureConti.jpg Graphic file (type jpg)
 
 <use contents/images/structureConti.jpg>
 Package pdftex.def Info: contents/images/structureConti.jpg used on input line 
-49.
+51.
 (pdftex.def)             Requested size: 512.1496pt x 388.00717pt.
 
-Overfull \hbox (11.38089pt too wide) in paragraph at lines 49--50
+Overfull \hbox (11.38089pt too wide) in paragraph at lines 51--52
  [][] 
  []
 
@@ -1776,7 +1776,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.58 
+l.60 
       <./contents/images/structureConti.jpg>])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1793,10 +1793,10 @@ Chapitre 2.
 File: contents/images/logoJava.png Graphic file (type png)
 
 <use contents/images/logoJava.png>
-Package pdftex.def Info: contents/images/logoJava.png used on input line 18.
+Package pdftex.def Info: contents/images/logoJava.png used on input line 19.
 (pdftex.def)             Requested size: 56.9055pt x 51.41496pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
@@ -1809,14 +1809,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 File: contents/images/logoGit.png Graphic file (type png)
 
 <use contents/images/logoGit.png>
-Package pdftex.def Info: contents/images/logoGit.png used on input line 25.
+Package pdftex.def Info: contents/images/logoGit.png used on input line 26.
 (pdftex.def)             Requested size: 71.13188pt x 71.13132pt.
 
 <contents/images/logoEclipse.png, id=272, 123.3408pt x 123.3408pt>
 File: contents/images/logoEclipse.png Graphic file (type png)
 
 <use contents/images/logoEclipse.png>
-Package pdftex.def Info: contents/images/logoEclipse.png used on input line 32.
+Package pdftex.def Info: contents/images/logoEclipse.png used on input line 35.
 
 (pdftex.def)             Requested size: 71.13188pt x 71.13306pt.
 
@@ -1825,10 +1825,10 @@ File: contents/images/logoEnterpriseArchitect.png Graphic file (type png)
 
 <use contents/images/logoEnterpriseArchitect.png>
 Package pdftex.def Info: contents/images/logoEnterpriseArchitect.png used on in
-put line 39.
+put line 42.
 (pdftex.def)             Requested size: 71.13188pt x 71.12491pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
@@ -1836,7 +1836,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 File: contents/images/logoLatex.png Graphic file (type png)
 
 <use contents/images/logoLatex.png>
-Package pdftex.def Info: contents/images/logoLatex.png used on input line 46.
+Package pdftex.def Info: contents/images/logoLatex.png used on input line 49.
 (pdftex.def)             Requested size: 71.13188pt x 29.6364pt.
 )
 
@@ -1929,11 +1929,11 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <24.88> not available
 File: contents/images/walkthrough.png Graphic file (type png)
 
 <use contents/images/walkthrough.png>
-Package pdftex.def Info: contents/images/walkthrough.png used on input line 22.
+Package pdftex.def Info: contents/images/walkthrough.png used on input line 23.
 
 (pdftex.def)             Requested size: 526.37598pt x 322.82758pt.
 
-Overfull \hbox (25.60727pt too wide) in paragraph at lines 22--23
+Overfull \hbox (25.60727pt too wide) in paragraph at lines 23--24
  [][] 
  []
 
@@ -1953,13 +1953,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.37 
+l.38 
       <./contents/images/walkthrough.png>]
 <contents/images/classAlias.png, id=362, 629.35126pt x 545.03625pt>
 File: contents/images/classAlias.png Graphic file (type png)
 
 <use contents/images/classAlias.png>
-Package pdftex.def Info: contents/images/classAlias.png used on input line 47.
+Package pdftex.def Info: contents/images/classAlias.png used on input line 48.
 (pdftex.def)             Requested size: 369.88582pt x 320.32944pt.
 
 Underfull \vbox (badness 1881) has occurred while \output is active []
@@ -1976,7 +1976,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.54 
+l.55 
       <./contents/images/classAlias.png (PNG copy)>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1994,7 +1994,7 @@ to.pdf>
 (epstopdf)                    size: 4208 bytes
 (epstopdf)             Command: <repstopdf --outfile=contents/images/generalDia
 g-eps-converted-to.pdf contents/images/generalDiag.eps>
-(epstopdf)             \includegraphics on input line 101.
+(epstopdf)             \includegraphics on input line 102.
 Package epstopdf Info: Output file is already uptodate.
 
 <contents/images/generalDiag-eps-converted-to.pdf, id=379, 1063.975pt x 629.351
@@ -2002,7 +2002,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: contents/images/generalDiag-eps-converted-to.pdf Graphic file (type pdf)
  <use contents/images/generalDiag-eps-converted-to.pdf>
 Package pdftex.def Info: contents/images/generalDiag-eps-converted-to.pdf used 
-on input line 101.
+on input line 102.
 (pdftex.def)             Requested size: 441.01772pt x 260.859pt.
 
 
@@ -2016,7 +2016,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.107 
+l.108 
        <./contents/images/generalDiag-eps-converted-to.pdf>])
 (./contents/greent/parser.tex
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -2053,10 +2053,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: contents/images/antlr.jpg Graphic file (type jpg)
 
 <use contents/images/antlr.jpg>
-Package pdftex.def Info: contents/images/antlr.jpg used on input line 87.
+Package pdftex.def Info: contents/images/antlr.jpg used on input line 88.
 (pdftex.def)             Requested size: 85.35826pt x 85.35712pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
@@ -2071,10 +2071,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: contents/images/check.png Graphic file (type png)
 
 <use contents/images/check.png>
-Package pdftex.def Info: contents/images/check.png used on input line 103.
+Package pdftex.def Info: contents/images/check.png used on input line 107.
 (pdftex.def)             Requested size: 512.1496pt x 72.69203pt.
 
-Overfull \hbox (11.38089pt too wide) in paragraph at lines 103--104
+Overfull \hbox (11.38089pt too wide) in paragraph at lines 107--108
  [][] 
  []
 
@@ -2084,18 +2084,18 @@ t>
 File: contents/images/expectedBehaviorGrammar.jpg Graphic file (type jpg)
  <use contents/images/expectedBehaviorGrammar.jpg>
 Package pdftex.def Info: contents/images/expectedBehaviorGrammar.jpg used on in
-put line 122.
+put line 127.
 (pdftex.def)             Requested size: 569.05511pt x 77.24284pt.
 
-Overfull \hbox (30.74733pt too wide) in paragraph at lines 121--123
+Overfull \hbox (30.74733pt too wide) in paragraph at lines 126--128
  []|  [] 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 126.
+Package mdframed Info: mdframed works in twoside mode on input line 131.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theoerem header of amsthm
-(mdframed)              on input line 126.
-Package mdframed Info: Not enough space on this page on input line 128.
+(mdframed)              on input line 131.
+Package mdframed Info: Not enough space on this page on input line 133.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2107,20 +2107,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.128 \end{remarque}
+l.133 \end{remarque}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{figure.4.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.128 \end{remarque}
+l.133 \end{remarque}
                      <./contents/images/check.png> <./contents/images/expectedB
 ehaviorGrammar.jpg>]
-Package mdframed Info: Not enough space on this page on input line 128.
+Package mdframed Info: Not enough space on this page on input line 133.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
+Overfull \hbox (4.21443pt too wide) in paragraph at lines 144--145
+[]\T1/lmr/m/n/12 J'ai sur-chargé les mé-thodes qui étaient in-té-res-santes ici
+ tel que \T1/lmtt/m/n/12 visitCheckFunc(CheckFuncContext
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2128,7 +2133,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
@@ -2219,7 +2224,7 @@ File: contents/images/TraceAnalyzer.jpg Graphic file (type jpg)
 
 <use contents/images/TraceAnalyzer.jpg>
 Package pdftex.def Info: contents/images/TraceAnalyzer.jpg used on input line 3
-4.
+6.
 (pdftex.def)             Requested size: 497.92322pt x 454.89417pt.
 
 
@@ -2233,14 +2238,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.38  	L
+l.40  	L
         e n\oe{}ud racine de l'arbre d'expression sera un \texttt{BoolEvalua...
  <./contents/images/diagLogique-eps-converted-to.pdf>]
 <contents/images/trace.png, id=564, 496.85625pt x 336.50719pt>
 File: contents/images/trace.png Graphic file (type png)
 
 <use contents/images/trace.png>
-Package pdftex.def Info: contents/images/trace.png used on input line 45.
+Package pdftex.def Info: contents/images/trace.png used on input line 47.
 (pdftex.def)             Requested size: 455.24408pt x 308.32722pt.
 
 
@@ -2254,12 +2259,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.48 
+l.50 
       <./contents/images/TraceAnalyzer.jpg>]
-Package mdframed Info: mdframed works in twoside mode on input line 49.
+Package mdframed Info: mdframed works in twoside mode on input line 51.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theoerem header of amsthm
-(mdframed)              on input line 49.
+(mdframed)              on input line 51.
 ))
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2279,10 +2284,7 @@ l.78 	\include{contents/greent/greent}
 
 (./contents/bilan/bilan.tex
 Chapitre 5.
-)
-Underfull \vbox (badness 2418) has occurred while \output is active []
-
- [35
+) [35
 
 
 
@@ -2444,11 +2446,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 88.
 Here is how much of TeX's memory you used:
  28267 strings out of 494232
  469477 string characters out of 3160025
- 772625 words of memory out of 3000000
+ 772626 words of memory out of 3000000
  30076 multiletter control sequences out of 15000+200000
  116769 words of font info for 87 fonts, out of 3000000 for 9000
  462 hyphenation exceptions out of 8191
- 56i,12n,59p,779b,2054s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,12n,59p,781b,2054s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/en
@@ -2465,7 +2467,7 @@ e1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/avantgar/uagk8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb>
-Output written on main.pdf (49 pages, 1825104 bytes).
+Output written on main.pdf (49 pages, 1824969 bytes).
 PDF statistics:
  1096 PDF objects out of 1200 (max. 8388607)
  983 compressed objects within 10 object streams

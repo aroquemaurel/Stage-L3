@@ -2,10 +2,11 @@
 	Lorsque je suis arrivé sur le projet, une partie de la conception était déjà réalisée, le fonctionnement général de la plateforme. Cette conception permet de répondre aux attentes du problème, tout en permettant le maximum d'évolutions facilement.
 	
 	\subsection{Le fichier Walkthrough}\label{wt}
-		Le fichier Walkthrough est un fichier qui sera fourni par la personne en charge des tests, c'est un fichier au format Excel qui contient les informations de chacune des variables à tester. Il contient ainsi un très grand nombre de colonnes, bien que seul une partie des colonnes nous intéresse, certaines colonnes ont été fournies par le fournisseur du plugin, d'autres colonnes sont ajoutées dans le seul but de la génération de tests automatiques par \textit{GreenT}. Voici les colonnes intéressantes : 
+		Le fichier Walkthrough est un fichier qui sera fourni par la personne en charge des tests, c'est un fichier au format Excel qui contient les informations
+		de chacune des variables à tester. Il contient ainsi un très grand nombre de colonnes, bien que seule une partie des colonnes nous intéresse, certaines colonnes ont été fournies par le fournisseur du plugin, d'autres colonnes sont ajoutées dans le seul but de la génération de tests automatiques par \textit{GreenT}. Voici les colonnes intéressantes : 
 
 		\begin{description} 
-			\item[Nom de la variable] Le nom de la variable testé : il existe un nom court et un nom long.
+			\item[Nom de la variable] Le nom de la variable testée : il existe un nom court et un nom long.
 			\item[Informations aidant à la conversion des données] Certains \textit{devices} tel que le debugger ne fonctionne qu'avec des valeurs Hexadécimales. À la charge de \textit{GreenT} de convertir ces données vers des valeurs physiques exploitables par le testeur
 			\item[Nécessité d'un test automatique] un \texttt{GreenTTest} ne sera généré que si la colonne vaut \textit{Yes}.
 			\item[Statut du test] Nous éditerons cette colonne afin de reporter le statut du test.
@@ -24,7 +25,7 @@
 		\end{figure}
 
 	\subsection{Fonctionnalités principales}
-	Le développement de \textit{GreenT} va inclure un certain nombre de fonctionnalités attendues par le client et indispensable à son fonctionnement. D'autres fonctionnalités pourront apparaître plus tard en fonction des besoins.
+	Le développement de \textit{GreenT} va inclure un certain nombre de fonctionnalités attendues par le client et indispensables à son fonctionnement. D'autres fonctionnalités pourront apparaître plus tard en fonction des besoins.
 
 	Les interactions entre les différents modules de \textit{GreenT} sont schématisées figure \ref{fig:generalDig}
 
@@ -86,11 +87,11 @@
 		\item Nom du responsable du test
 		\item Sévérité du test
 		\item Pourcentage de branches de l'expectedBehavior renvoyant faux\footnote{Test << Rouge >>}, n'ayant pas pu être testé\footnote{Test << Gris >>} et étant correct\footnote{Test Vert}
-		\item Le testeur aura à sa disposition les expressions concernés par un résultat Rouge ou Gris.
+		\item Le testeur aura à sa disposition les expressions concernées par un résultat Rouge ou Gris.
 		\item Les colonnes utiles du \textit{Walkthrough}
 	\end{itemize}
 
-	Le format du rapport détaillé n'a pas encore été définis, mais cela pourrait être des fichiers textes, avec pour évolution une possibilité de le faire sous format Web avec affichage des courbes de trace par exemple.
+	Le format du rapport détaillé n'a pas encore été défini, mais cela pourrait être des fichiers textes, avec pour évolution une possibilité de le faire sous format Web avec affichage des courbes de trace par exemple.
 
 	\subsubsection{Mise à jour du Walkthrough}
 	Une fois un test exécuté, un résultat sera mis dans le fichier Excel, en fonction de la sévérité du test. En effet, un test \textit{High} ne devra comporter aucune branche non testée contrairement à un test \textit{Low} par exemple.
@@ -102,7 +103,7 @@
 			\caption{Fonctionnement général du parser \textit{GreenT}}
 			\label{fig:generalDig}
 		\end{figure}
-		Dans ce schéma nous pouvons voir les différents modules détaillés précédemment : un type de parser prend en entrée un fichier, qu'il analyse, génère les fichiers Java, les donnes au \texttt{TestManager}, qui les organise en \textit{Bundle}, les compiles, donne les binaires au \texttt{WorkbenchTestManager}, qui dialogue directement avec le banc, une fois le bundle exécuté, celui-ci retourne la trace. Il ne reste plus qu'a l'analyser et prononcer un verdict.\\
+		Dans ce schéma nous pouvons voir les différents modules détaillés précédemment : un type de parser prend en entrée un fichier, qu'il analyse, génère les fichiers Java, les donne au \texttt{TestManager}, qui les organise en \textit{Bundle}, les compile, donne les binaires au \texttt{WorkbenchTestManager}, qui dialogue directement avec le banc, une fois le bundle exécuté, celui-ci retourne la trace. Il ne reste plus qu'a l'analyser et prononcer un verdict.\\
 		Dans des objets ovales sont représentés des fichiers, les carrés représentent des modules de la plateforme et les flèches en pointillés un transfert réseau.
 
 	Pour ma part, je me suis occupé de la partie du parser, du générateur, et j'ai aidé à la conception du système d'évaluation et d'analyses des traces.

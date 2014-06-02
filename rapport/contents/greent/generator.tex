@@ -2,7 +2,7 @@
 	Comme montré dans le schéma \ref{fig:generalDig}, une fois le walkthrough parsé, il faut générer les fichiers nécessaire au test. Pour cela, j'ai créé un \textit{package} de classes ayant des services permettant d'ajouter les fonctionnalités à générer : Ajouter un check, ajouter une affectation, ajouter une action debugger, ajouter les informations des tests, \ldots et lancer la génération du fichier.
 
 		\subsection{Génération des tests}
-		Je dois générer 3 types de fichiers : un précondstim, des stimscenarios et un \texttt{GreenTTest} pour chaque test. Chacune des classes que je génères hérite d'une classe présente dans \textit{GreenT}, respectivement \texttt{PrecondStim}, \texttt{StimScenario} et \texttt{GreenTTest}.
+		Je dois générer 3 types de fichiers : un précondstim, des stimscenarios et un \texttt{GreenTTest} pour chaque test. Chacune des classes que je génère hérite d'une classe présente dans \textit{GreenT}, respectivement \texttt{PrecondStim}, \texttt{StimScenario} et \texttt{GreenTTest}.
 
 		La génération des fichiers possède des points communs en fonction du type de fichier, principalement entre un \texttt{PrecondStim} et un \texttt{StimScenario}, ainsi j'ai conçu un arbre d'héritage assez simple me permettant de factoriser le code : 
 		\begin{figure}[H]
@@ -16,13 +16,13 @@
 		\begin{wrapfigure}{l}{3cm}
 			\includegraphics[width=3cm]{contents/images/FreeMarker.png}
 		\end{wrapfigure}
-		Les classes que je génères ont un gabarit commun, seul l'implémentation des méthodes changent, ainsi plutôt que réécrire systématiquement tout le corps de la classe, il parraissait intéressant d'avoir un moteur de \textit{template}, j'ai choisi FreeMarker.
+		Les classes que je génère ont un gabarit commun, seule l'implémentation des méthodes change, ainsi plutôt que réécrire systématiquement tout le corps de la classe, il parraissait intéressant d'avoir un moteur de \textit{template}, j'ai choisi FreeMarker.
 
 		J'ai développé un fichier gabarait utilisant le format FreeMarker, à l'interieur de ce gabarit, j'utilise des objets. Lors de la sérialisation, je fournis les valeurs des objets concernés, l'adresse du gabarit, le fichier \texttt{.java} est ensuite généré par FreeMarker.
 
-		Deux fichiers de templates ont été nécessaires : un pour les stim, et un pour le \textit{GreenTTest}. En effet un precondstim et un stimscenario n'ont que peu de différence, il était donc possible de les regrouper avec le même template.
+		Deux fichiers de templates ont été nécessaire : un pour les stim, et un pour le \textit{GreenTTest}. En effet un precondstim et un stimscenario n'ont que peu de différence, il était donc possible de les regrouper avec le même template.
 
-		Le template des stim contient une liste d'actions à exécuter dans la méthode d'exécution, et une liste d'alias nécessaire qui doivent être ajoutés dans une méthode adéquate. \\
+		Le template des stim contient une liste d'actions à exécuter dans la méthode d'exécution, et une liste d'alias nécessaire qui doivent être ajoutée dans une méthode adéquate. \\
 		Le template des \textit{GreenTTest} lui contient une méthode permettant de remplir le rapport et une méthode qui créé l'\textit{Expected Behavior}.
 		Les deux templates ont également une liste d'import qui est ajoutés automatiquement en début du fichier, ceux-ci sont disponibles dans l'annexe \ref{annexeTemplate} suivis de deux exemples de fichiers générés annexe \ref{annexeGeneration}.
 
