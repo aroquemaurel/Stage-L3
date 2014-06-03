@@ -1,6 +1,7 @@
 % /solutions/conference-talks/conference-ornate-20min.fr.tex, 22/02/2006 De Sousa
 \documentclass{beamer}
 \usepackage{listings}
+\usepackage{mdframed}
 % Ce fichier est un exemple d'expos\'e
 
 % - pour des conf\'erences,
@@ -28,7 +29,7 @@
 \usepackage[francais]{babel}
 % or autre comme par exemple \usepackage[english]{babel}
 
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 % or autre
 
 \usepackage{float}
@@ -38,6 +39,9 @@
 \usepackage[T1]{fontenc}
 % Or autre. Notez que le codage et la fonte doivent être assortis. Si T1
 % ne paraît pas tr\`es esth\'etique, essayer d'effacer la ligne contenant fontenc.
+
+\hypersetup{pdfpagemode=FullScreen}
+
 
 \mode<presentation> {
   \usetheme{UNLTheme}
@@ -118,38 +122,225 @@
 					\vskip0pt%
 }
 
+\setbeamertemplate{navigation symbols}{}
 \begin{document}
 \begin{frame}
   \titlepage
 \end{frame}
-\begin{frame}{Plan}
-	\tableofcontents
-\end{frame}
 \section*{Introduction}
 \begin{frame}{Pr\'esentation des acteurs}
-~
+	\begin{tabular}{lcr}
+		\hspace{-10px}
+	\begin{minipage}{0.5\textwidth}
+		\begin{block}{Continental}
+			Maître de stage: 
+			\vspace{-5px}
+			\begin{itemize}
+				\item Stéphane Bride
+			\end{itemize}
+
+			\vspace{5px}
+			Équipe de développement:
+			\vspace{-15px}
+			\begin{itemize}
+				\item Alain \bsc{Fernandez}
+				\item Olivier \bsc{Ramel}
+			\end{itemize}
+		\end{block}
+	\end{minipage}
+	&&
+	\hspace{-8px}
+	\begin{minipage}{0.44\textwidth}
+		\begin{block}{Université Toulouse III}
+			Tuteur de stage: 
+\begin{itemize}
+	\item Joseph \bsc{Boudou}
+\end{itemize}
+~ \newline
+~ \newline
+		\end{block}
+	\end{minipage}
+\end{tabular}
+\end{frame}
+\begin{frame}{Plan}
+	\tableofcontents
 \end{frame}
 \section{L'entreprise}
 \subsection{Continental}
 \begin{frame}{L'entreprise Continental}
+	\begin{itemize}
+		\item Entreprise allemande
+			\begin{itemize}
+				\item Plus de 163000 employés
+				\item Dans 46 pays différents
+			\end{itemize}
+			\vfill
+			\pause
+		\item Fabrication Automobile
+			\begin{itemize}
+				\item Sécurité automobile 
+				\item Contrôle moteur
+				\item Pneus
+				\item \ldots
+			\end{itemize}
+	\end{itemize}
 \end{frame}
 \subsection{L'\'equipe V\'erification \& Validation}
 \begin{frame}{L'\'equipe V\'erification et Validation}
+	\begin{itemize}
+		\item Appartient à la division << \textit{Powertrain} >>
+			\begin{itemize}
+				\item Calculateurs de contrôle moteur
+				\item Mise au point des systèmes essence ou diesel
+			\end{itemize}
+	\end{itemize}
+	\pause
+	\begin{itemize}
+		\item Doit développer des Scripts de tests automatiques
+			\begin{itemize}
+				\item Tests de non régression
+				\item Tests d'intégration
+			\end{itemize}
+	\end{itemize}
+	\pause
+	\vfill
+	\begin{block}{Le besoin}
+		\begin{itemize}
+			\item Système à haut risque 
+			\item Beaucoup de cas d'utilisations 
+		\end{itemize}
+	\end{block}
+	\pause
+	\hspace{30px} $\Rightarrow$ Automatisation des tests indispensable
 \end{frame}
-\section{Le probl\`eme}
-\begin{frame}{Le probl\'eme}
+\section{Le probl\`eme des tests}
+\begin{frame}{Le problème des tests}
+	Intégration du << plugin >>
+	\vspace{-10px}
+			\begin{itemize}
+				\item Fourni par le client
+				\item Doit s'interfacer avec les logiciels Continental 
+				\item Spécification des variables fournie au format Excel
+			\end{itemize}
+			\vfill
+			\pause
+	Difficultés à tester ce plugin : 
+	\vspace{-10px}
+	\begin{itemize}
+		\item Fiabilité des tests
+		\item Longueur des tests
+		\item Disponibilité des bancs de tests
+	\end{itemize}
 \end{frame}
+
 \section{La solution : GreenT}
 \subsection{Fonctionnement g\'en\'eral}
-\begin{frame}{Fonctionnement g\'en\'eral}
+\begin{frame}{Fonctionnalités nécessaires}
+	\begin{itemize}
+		\item Parser le fichier de spécifications
+		\item Générer automatiquement des jar exécutables 
+		\item Rapport détaillé
+	\end{itemize}
+	\pause
+
+	Fonctionnement des exécutables : 
+	\vspace{-10px}
+	\begin{itemize}
+		\item Scénario de précondition\newline
+			\footnotesize
+			$\rightarrow$ Initialise le bancs de tests
+			\normalsize
+			\pause
+		\item Scénarios de stimulation de l'environnement\newline
+			\footnotesize
+			$\rightarrow$ Enregistre des variables durant les scénarios
+			\normalsize
+			\pause
+		\item \textit{Expected Behavior }
+			\footnotesize
+			\begin{itemize}
+				\item Expression booléenne
+				\item Évaluée sur l'ensemble de l'enregistrement
+			\end{itemize}
+	\end{itemize}
 \end{frame}
-\subsection{Parser et g\'en\erateur}
-\begin{frame}{Parser et g\'en\'erateur}
+\begin{frame}{Fonctionnement de GreenT}
+	\only<1> {
+	\begin{figure}[H]
+		\includegraphics[width=10cm]{generalDiag.eps}
+		\caption{Schéma de fonctionnement général}
+	\end{figure}
+	}
+	\only<2> {
+	\begin{figure}[H]
+		\hspace{-88px}
+		\includegraphics[width=12.4cm]{generalDiag-eps-converted-to.pdf}
+		\caption{Schéma de fonctionnement général}
+	\end{figure}
+	}	
+\end{frame}
+\subsection{Parser et g\'en\'erateur}
+\begin{frame}{Parser : utilisation de Antlr}
+	Parser: 
+	\vspace{-10px}
+	\begin{itemize}
+		\item Rédaction d'une grammaire \newline
+			\footnotesize
+			$\rightarrow$ Arbre d'évaluation généré automatiquement par Antlr
+			\normalsize
+		\item Parcours de l'arbre et actions associés\newline
+			$\rightarrow$ Appel du générateur
+	\end{itemize}
+	\vfill
+	\pause
+	Gestion des exceptions:
+	\vspace{-10px}
+	\begin{itemize}
+		\item Avant la phase d'exécution : 
+			\begin{itemize}
+		\item Erreur de syntaxe
+		\item Écriture sur une variable en lecture seule
+		\item Lecture sur une variable en écriture seule
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Générateur : utilisation de Freemaker}
 \end{frame}
 \section*{Conclusion}
-\begin{frame}
+\begin{frame}{Vers le master Développement Logiciel}
+		Bilan pour Continental:
+	\vspace{-10px}
+		\begin{itemize}
+			\item Stage prolongé jusqu'à mi-Juillet
+			\item Participation à la conception $\rightarrow$ Regarde neuf
+			\item Développement de deux modules : parsing et génération\newline
+				$\rightarrow$ Génération des \textit{ExpectedBehavior} en cours
+		\end{itemize}
+	\vfill
+	\pause
+
+	Bilan personnel:
+	\vspace{-10px}
+		\begin{itemize}
+			\item D'un point de vue technique
+				\begin{itemize}
+					\item Expérience en conception logicielle
+					\item Visions différentes d'un problème
+				\end{itemize}
+				\pause
+			\item D'un point de vue humain
+				\begin{itemize}
+					\item Travail en équipe
+					\item Synthétisation et restitutions
+				\end{itemize}
+		\end{itemize}
 \end{frame}
 \begin{frame}{Avez-vous des questions ?}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=3.5cm]{interrogation.jpg}
+	\end{figure}
 \end{frame}
 \end{document}
 
