@@ -69,7 +69,7 @@
         \hfill%
       \fi%
       \ifdim\beamer@sidebarwidth>0pt%
-        \usebeamercolor[bg]{frametitle}%
+        \usebeamercolor[bg]{logo}%
         \vrule width\beamer@sidebarwidth height \beamer@headheight%
         \hskip-\beamer@sidebarwidth%
         \hbox to \beamer@sidebarwidth{\hss\vbox to
@@ -124,9 +124,11 @@
   \setbeamersize{sidebar width \beamer@sidebarside=\beamer@sidebarwidth}
   \defbeamertemplate*{sidebar \beamer@sidebarside}{sidebar theme}
   {
+
     \beamer@tempdim=\beamer@sidebarwidth%
     \advance\beamer@tempdim by -6pt%
     {\usebeamerfont{title in sidebar}%
+     \vspace{4px}\includegraphics[width=2.4cm]{ups.jpg}
       \vskip1.5em%
       \hskip3pt%
       \usebeamercolor[fg]{title in sidebar}%
@@ -134,10 +136,12 @@
       \vskip1.25em%
     }%
     {%
-      \hskip3pt%
       \usebeamercolor[fg]{author in sidebar}%
       \usebeamerfont{author in sidebar}%
-      \insertshortauthor[width=\beamer@tempdim,left,respectlinebreaks]\par%
+
+            \hskip3pt%
+
+		\insertshortauthor[width=\beamer@tempdim,left,respectlinebreaks]\par%
       \vskip1.25em%
     }%
     \insertverticalnavigation{\beamer@sidebarwidth}%
@@ -250,7 +254,7 @@
 }
 % End Shadow
 
-\usecolortheme[RGB={178,66,0}]{structure}
+\usecolortheme[RGB={220,136,16}]{structure}
 
 % Complete color themes:
 % albatross, beetle, crane, dove, fly, seagull
@@ -281,7 +285,6 @@
 
 % Set the UNL logo, UNL.pdf must be in the latex path or working directory
 \setbeamercolor{logo}{fg=black,bg=white}
-\logo{\includegraphics[height=0.9cm]{logo.jpg}}
 
 % Handout Mode - Using the default layouts, no menus, etc.
 \mode
@@ -331,7 +334,7 @@
 }
 
 % We declare the main color theme: Scarlet & Cream
-\definecolor{UNL@Scarlet}{RGB}{178,66,0}
+\definecolor{UNL@Scarlet}{RGB}{220,136,16}
 % Alternate UNL@Reds: 204,0,0 (unl.edu) <--seems to be the best
 %                     240,7,46 (logo)
 %                     255,25,25 (original)
@@ -347,7 +350,7 @@
 \definecolor{UNL@Grey}{RGB}{100,100,100}
 \definecolor{UNL@LightGrey}{RGB}{200,200,200}
 \definecolor{UNL@VeryLightGrey}{RGB}{225,225,225}
-\definecolor{UNL@Frametitle}{RGB}{178,66,0}
+\definecolor{UNL@Frametitle}{RGB}{220,136,16}
 
 % We enforce conformity at UNL!
 % so we override example (greenish) and alerted (redish)

@@ -1,8 +1,9 @@
-\beamer@endinputifotherversion {3.10pt}
+\beamer@endinputifotherversion {3.33pt}
 \select@language {french}
-\beamer@sectionintoc {1}{test}{6}{0}{1}
-\beamer@sectionintoc {2}{test}{7}{0}{2}
-\beamer@sectionintoc {3}{test}{8}{0}{3}
-\beamer@sectionintoc {4}{test}{9}{0}{4}
-\beamer@sectionintoc {5}{test}{10}{0}{5}
-\beamer@sectionintoc {6}{test}{11}{0}{6}
+\beamer@sectionintoc {2}{L'entreprise}{4}{0}{1}
+\beamer@subsectionintoc {2}{1}{Continental}{5}{0}{1}
+\beamer@subsectionintoc {2}{2}{L'\'equipe V\'erification \& Validation}{6}{0}{1}
+\beamer@sectionintoc {3}{Le probl\`eme}{7}{0}{2}
+\beamer@sectionintoc {4}{La solution : GreenT}{9}{0}{3}
+\beamer@subsectionintoc {4}{1}{Fonctionnement g\'en\'eral}{10}{0}{3}
+\beamer@subsectionintoc {4}{2}{Parser et g\'en}{11}{0}{3}
