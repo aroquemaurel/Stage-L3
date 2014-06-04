@@ -2,6 +2,7 @@
 \documentclass{beamer}
 \usepackage{listings}
 \usepackage{mdframed}
+\usepackage{tikz}
 % Ce fichier est un exemple d'expos\'e
 
 % - pour des conf\'erences,
@@ -52,7 +53,7 @@
 }
 
 \title[] % (facultatif, \`a utiliser uniquement si le titre de l'article est trop long)
-{D\'eveloppement d'une plateforme de tests automatis\'es : GreenT\vspace{11px}}
+{D\'eveloppement d'une plateforme \newline de tests automatis\'es : GreenT\vspace{11px}}
 \subtitle {}
 
 \author[Antoine de \bsc{Roquemaurel}] % (facultatif, \`a utiliser seulement avec plusieurs auteurs)
@@ -169,16 +170,15 @@
 \subsection{Continental}
 \begin{frame}{L'entreprise Continental}
 
-	\begin{itemize}[<+->]
-  \setbeamercovered{transparent}	
+	\begin{itemize}
 		\item Entreprise allemande
 			\begin{itemize}
-				\item Plus de 163000 employés\newline
-				$\rightarrow$ dont 2000 à Toulouse
+				\item Plus de $177\;000$ employés\newline
+				$\rightarrow$ Dont $2\;000$ à Toulouse
 				\item Dans 46 pays différents
 			\end{itemize}
 			\vfill	
-			\uncover<4->{		  
+			\pause
 		\item Equipementier Automobile
 			\begin{itemize}
 				\item Sécurité automobile 
@@ -191,14 +191,12 @@
 				\item ...
 				
 			\end{itemize}
-			}
 	\end{itemize}
 \end{frame}
 \subsection{L'\'equipe V\'erification \& Validation}
-\begin{frame}{L'\'equipe V\'erification et Validation}
+\begin{frame}{L'\'equipe V\'erification \& Validation}
 
-	\begin{itemize}[<+->]
-		  \setbeamercovered{transparent}
+	\begin{itemize}
 
 		\item Appartient à la division << \textit{Powertrain} >>
 			\begin{itemize}
@@ -207,60 +205,51 @@
 			\end{itemize}
 	\end{itemize}
 	
-	\uncover<4->{
-	\begin{itemize}[<+->]
-		  \setbeamercovered{transparent}
-
+	\begin{itemize}
+			\pause
 		\item Doit développer des scripts de tests automatiques
 			\begin{itemize}
 				\item Tests de non régression
 				\item Tests d'intégration
 			\end{itemize}
 	\end{itemize}
-	}
 	\vfill
-	\uncover<7-> {
+	\pause
 	\begin{block}{Le besoin}
-		\begin{itemize}[<+->]
+		\begin{itemize}
 			\item Système à haut risque 
 			\item Beaucoup de cas d'utilisations 
 		\end{itemize}
 	\end{block}
-	}
-	\uncover<9-> {
+	\pause
 	\hspace{30px} $\Rightarrow$ Automatisation des tests indispensable
-	}
 \end{frame}
 \section{Le probl\`eme des tests}
 \begin{frame}{Le problème des tests}
 	Intégration du << plugin >>
 	\vspace{-10px}
-			\begin{itemize}[<+->]
-			  \setbeamercovered{transparent}
+			\begin{itemize}
 				\item Fourni par le client
 				\item Doit s'interfacer avec les logiciels Continental 
 				\item Spécification des variables fournie au format Excel
 			\end{itemize}
-			\uncover<4->{
+			\pause
 	Difficultés à tester ce plugin : 
 	\vspace{-10px}
-	\begin{itemize}[<+->]
-	  \setbeamercovered{transparent}
+	\begin{itemize}
 		\item Fiabilité des tests
 		\item Temps des tests
 		\item Disponibilité des bancs de tests
 	\end{itemize}
-	}
 \end{frame}
 
 \section{La solution : GreenT}
 \subsection{Fonctionnement g\'en\'eral}
 \begin{frame}{Fonctionnalités nécessaires}
 \vspace{-10px}
-	\begin{itemize}[<+->]
-	  \setbeamercovered{transparent}
+	\begin{itemize}
 		\item Parser le fichier de spécifications
-		\item Générer automatiquement des jar exécutables 
+		\item Générer automatiquement des \bsc{jar} exécutables 
 		\item Rapport détaillé
 		\item Optimisation du temps d'exécution des tests
 	\end{itemize}
@@ -268,29 +257,26 @@
 
 \end{frame}
 \begin{frame}{Fonctionnement des exécutables}
-	\begin{itemize}[<+->]
-	  \setbeamercovered{transparent}
+	\begin{itemize}
 	  \vfill
-		\item Scénario de précondition
+		\item Un scénario de précondition
 		\begin{itemize}
 			\item Initialise le banc de tests
 		\end{itemize}
-	\uncover<2->{
+		\pause
 	\vfill
-		\item Scénarios de stimulation de l'environnement
+		\item Des scénarios de stimulation de l'environnement
 			\begin{itemize}
-			\item Pilote le banc HIL qui génère les stimulis pour le calculateur sous test
-			\item Enregistre des variables durant les scénarios
+			\item Pilotent le banc HIL qui génère les stimulis pour le calculateur sous test
+			\item Enregistrement de variables durant les scénarios
 			\end{itemize}
-	}
-	\uncover<5->{
+			\pause
 	\vfill
 		\item \textit{Expected Behavior }
 			\begin{itemize}
 				\item Expression booléenne
 				\item Évaluée sur l'ensemble de l'enregistrement
 			\end{itemize}
-	}
 	\vfill
 	\end{itemize}
 \end{frame}
@@ -301,62 +287,69 @@
 		\caption{Schéma de fonctionnement général}
 	\end{figure}
 	}
-	\only<2> {
-	\begin{figure}[H]
-		\hspace{-88px}
-		\includegraphics[width=12.4cm]{generalDiag-eps-converted-to.pdf}
-		\caption{Schéma de fonctionnement général}
-	\end{figure}
-	}	
+\end{frame}
+\begin{frame}[plain]
+\begin{tikzpicture}[remember picture,overlay]
+\node[at=(current page.center)] {
+\includegraphics[width=\paperwidth]{generalDiag.eps}
+};
+\end{tikzpicture}
 \end{frame}
 \subsection{Parser et g\'en\'erateur}
 \begin{frame}{Parser : utilisation de Antlr}
 	Parser: 
 	\vspace{-10px}
-	\begin{itemize}[<+->]
-	  \setbeamercovered{transparent}
-		\item Rédaction d'une grammaire \newline
+\begin{wrapfigure}{r}{1.5cm}
+	\includegraphics[width=1.5cm]{antlr.jpg}
+\end{wrapfigure}
+	\begin{itemize}
+		\item Création de 2 grammaires 
+			\begin{itemize}
+				\item Scénarios et \textit{Excepted Behavior}
+				\item Arbre d'évaluation généré automatiquement par Antlr
+			\end{itemize}
 			\footnotesize
-			$\rightarrow$ Arbre d'évaluation généré automatiquement par Antlr
 			\normalsize
-		\item Parcours de l'arbre et actions associées\newline
-					\footnotesize
-			$\rightarrow$ Appel du générateur
+		\item Parcours de l'arbre
+			\begin{itemize}
+				\item Appel du générateur au niveau des feuilles
+				\item Utilise les n\oe{}uds pour connaître le contexte  
+			\end{itemize}
 	\end{itemize}
 	\vfill
-	\uncover<3->{
-	Gestion des exceptions:
-	\vspace{-10px}
-	\begin{itemize}[<+->]
-	  \setbeamercovered{transparent}
-		\item Avant la phase d'exécution des tests: 
+	\pause
+	Gestion des exceptions:\newline
+	\hspace{20px}
+	$\rightarrow$ Avant la phase d'exécution des tests: 
 			\begin{itemize}
+					\vspace{-10px}
 		\item Erreur de syntaxe
 		\item Écriture sur une variable en lecture seule
 		\item Lecture sur une variable en écriture seule
+		\item Variable inconnue 
 		\end{itemize}
-	\end{itemize}
-	}
 \end{frame}
 
 \begin{frame}{Générateur : utilisation de Freemaker}
-  
-
-	\begin{itemize}[<+->]
-	\setbeamercovered{transparent}
+	~
+	\begin{wrapfigure}{r}{1.5cm}
+		\includegraphics[width=1.5cm]{FreeMaker.png}
+	\end{wrapfigure}
+	\vspace{-30px}
+	\begin{itemize}
 		\item Système de template : Freemaker
-		\uncover<2->{
-		\item 3 types de fichiers à générer
-		\begin{itemize}[<+->]
-			\item Précond Stim
-			\item Stim Scénario
-			\item GreenTTest $\rightarrow$ contient \textit{ExpectedBehavior}, informations du rapport, \ldots
+			\vfill
+			\pause
+		\item 3 types de classes Java à générer
+		\begin{itemize}
+			\item \texttt{PrecondStim}
+			\item \texttt{StimScénario}
+			\item \texttt{GreenTTest} $\rightarrow$ Contient \textit{ExpectedBehavior}, informations du rapport, \ldots
 		\end{itemize}
-		}
-		\uncover<6->{
-		\item générer du code qui sera compilé\newline
-			$\rightarrow$ Limite les erreurs à l'exécution des tests
-			}
+		\pause
+			\vfill
+		\item Générer du code qui sera compilé\newline
+			$\rightarrow$ Limiter les erreurs pendant l'exécution des tests
 	\end{itemize}
 \end{frame}
 
@@ -364,13 +357,17 @@
 \begin{frame}{Vers le master Développement Logiciel}
 		Bilan pour Continental:
 	\vspace{-10px}
-		\begin{itemize}[<+->]
+	\begin{itemize}[<+->]
 		  \setbeamercovered{transparent}
-
-			\item Stage prolongé jusqu'à mi-Juillet
+			\item Stage prolongé jusqu'à mi-juillet
 			\item Participation à la conception $\rightarrow$ Regard neuf
-			\item Développement de deux modules : parsing et génération\newline
-				$\rightarrow$ Génération des \textit{ExpectedBehavior} en cours
+			\item Développement de différents modules 
+				\begin{itemize}
+					\item<3-> Parser : terminé
+					\item<3-> Génération des scénarios : terminé
+					\item<3-> Génération des ExpectedBehavior : en cours
+					\item<3-> Analyse des traces, rapport détaillé : à faire
+				\end{itemize}
 		\end{itemize}
 	\vfill
 	\uncover<4->{
@@ -387,7 +384,7 @@
 			\item D'un point de vue humain
 				\begin{itemize}
 					\item Travail en équipe
-					\item Synthétisation et restitutions
+					\item Synthèse et restitutions
 				\end{itemize}
 		\end{itemize}
 		}
@@ -414,3 +411,6 @@
 	% 2'
 
 %15.5
+
+% gestion des ex ->
+%	rédac -> crreeer
