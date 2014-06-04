@@ -1,6 +1,6 @@
 	\section{Fonctionnement général}
 	Lorsque je suis arrivé sur le projet, une partie de la conception était déjà réalisée, le fonctionnement général de la plateforme. Cette conception permet de répondre aux attentes du problème, tout en permettant le maximum d'évolutions facilement.
-	
+
 	\subsection{Le fichier Walkthrough}\label{wt}
 		Le fichier Walkthrough est un fichier qui sera fourni par la personne en charge des tests, c'est un fichier au format Excel qui contient les informations
 		de chacune des variables à tester. Il contient ainsi un très grand nombre de colonnes, bien que seule une partie des colonnes nous intéresse, certaines colonnes ont été fournies par le fournisseur du plugin, d'autres colonnes sont ajoutées dans le seul but de la génération de tests automatiques par \textit{GreenT}. Voici les colonnes intéressantes : 
@@ -12,8 +12,8 @@
 			\item[Statut du test] Nous éditerons cette colonne afin de reporter le statut du test.
 			\item[Precondition (cf section \ref{stim})] Contient un scénario d'initialisation du \textit{workbench} : tension de départ, lancement du debugger, \ldots
 			\item[Scénario de stimulation (cf section \ref{stim})] Contient un ou plusieurs scénarios de stimulations
-			\item[ExpectedBehavior (cf section \ref{expectedBehavior})] Contient une expression évaluant les variables ayant été enregistrées durant la stimulation : \textit{GreenT} devra vérifier que cette expression est correct à toute instant de la stimulation.
-			\item[Variable à enregistrer (cf section \ref{expectedBehavior})] Contient les variables devont être enregistrées durant un scénario, en plus des variables présentes dans l'expected behavior.
+			\item[\texttt{ExpectedBehavior}(comportement attendu, cf section \ref{expectedBehavior})] Contient une expression évaluant les variables ayant été enregistrées durant la stimulation : \textit{GreenT} devra vérifier que cette expression est correct à toute instant de la stimulation.
+			\item[Variable à enregistrer (cf section \ref{expectedBehavior})] Contient les variables devant être enregistrées durant un scénario, en plus des variables présentes dans l'expected behavior.
 			\item[Alias locaux (cf section \ref{alias})] Ce sont des alias déclarés uniquement pour le test courant.
 			\item[Informations du test (cf section \ref{report})] Plusieurs colonnes tel que la sévérité, le responsable du test, les commentaires, \ldots
 		\end{description}
@@ -25,19 +25,27 @@
 		\end{figure}
 
 	\subsection{Fonctionnalités principales}
-	Le développement de \textit{GreenT} va inclure un certain nombre de fonctionnalités attendues par le client et indispensables à son fonctionnement. D'autres fonctionnalités pourront apparaître plus tard en fonction des besoins.
+	Le développement de \textit{GreenT} va inclure un certain nombre de fonctionnalités attendues par le client et indispensable à son fonctionnement. D'autres fonctionnalités pourront apparaître plus tard en fonction des besoins.
 
-	Les interactions entre les différents modules de \textit{GreenT} sont schématisées figure \ref{fig:generalDig}
+	Les principaux modules sont les suivants, avec leurs interactions schématisées figure \ref{fig:generalDiag} : 
+			Dans des objets ovales sont représentés des fichiers, les carrés représentent des modules de la plateforme et les flèches en pointillés un transfert réseau, les couleurs représentent les différents modules de la plateforme.
+
+			\begin{figure}[H]
+			\centering
+			\includegraphics[width=16.5cm]{contents/images/generalDiag.eps}
+			\caption{Fonctionnement général de la plateforme \textit{GreenT}}
+			\label{fig:generalDig}
+		\end{figure}	
 
 	\subsubsection{Parsing et Génération}\label{generation}
 	Le but premier de la plateforme est d'effectuer des tests automatiques, il est ainsi indispensable d'avoir un système d'automatisation.
 
-	Pour cela, nous allons avoir un parser : il analysera un certain type de fichier\footnote{Nous ne commencerons qu'avec le Walkthrough pour débuter, mais dans le futur nous pourrions avoir des fichiers XML, des bases de données, \ldots} et en retirera pour chaque test, le scénario de pré condition, les différents scénarios de stimulations, leurs \textit{Expected Behavior}, les données qui devront être enregistrées ainsi que les différentes données du test\footnote{Responsable du test, sévérité, commentaires, nom de la variable, \ldots}.
+	Pour cela, nous allons avoir un parser : il analysera un certain type de fichier\footnote{Nous ne commencerons qu'avec le Walkthrough pour débuter, mais dans le futur nous pourrions avoir des fichiers XML, des bases de données, \ldots} et en retirera pour chaque test, le scénario de pré condition, les différents scénarios de stimulations, leurs \textit{Expected Behavior}, les données qui devront être enregistrées ainsi que différentes information sur le test\footnote{Responsable du test, sévérité, commentaires, nom de la variable, \ldots}.
 
 	Une fois toutes ces données acquises, il les transmettra à un générateur qui sera en charge d'écrire les fichiers Java de chaque test, tous seront organisés dans un dossier temporaire avec un dossier par test. Le \texttt{TestManager} pourra ensuite traiter ces données.
 
 	\subsubsection{Résolution des alias}\label{alias}
-		Les devices ont des fonctionnements différents pour leurs variables internes, le HIL\footnote{Hardware in the loop} par exemple utilise des adresses de base de données, alors que le debugger fonctionne avec des valeurs Hexadécimales permettant d'accéder directement à des cases RAM.
+		Les devices ont des fonctionnements différents pour leurs variables internes, le banc HIL (Hardware in the loop) par exemple utilise des adresses de base de données, alors que le debugger fonctionne avec des valeurs Hexadécimales permettant d'accéder directement à des cases RAM.
 
 		Il est donc indispensable de fournir au client une approche permettant de masquer ces différences, et le risque d'erreur en écrivant une adresse, pour cela nous avons pensé un système d'alias : un alias possède un nom qui permet de le lier une valeur sur le device à un nom de variable, le client n'aura ensuite plus qu'à travailler avec des noms clairs et explicites.
 
@@ -48,10 +56,10 @@
 			\includegraphics[width=13cm]{contents/images/classAlias.png}
 			\caption{Diagramme de classes des Alias}
 		\end{figure}
-		Les alias en écriture sont répartis en deux types : les alias HIL et les alias Debugger, car ils n'ont pas les même méthodes : il est possible de faire un set hexadécimal sur un debugger, contrairement à un HIL qui lui permet d'effectuer un set électrique. 
+		Les alias en écriture sont répartis en deux sous-types : les alias HIL et les alias Debugger, car ils n'ont pas les même méthodes : il est possible de faire un set hexadécimal sur un debugger, contrairement à un HIL qui lui permet d'effectuer un set électrique. 
 
 	\subsubsection{Stimulation} \label{stim}
-		Afin de tester une variable du plugin, les développeurs vont utiliser des alias présents sur un équipement\footnote{De l'anglais \textit{Device}} : actuellement, un HIL ou un debugger, prochainement nous pourrions en utiliser d'autres que ces deux derniers.
+		Afin de tester une variable du plugin, les développeurs vont utiliser des alias présents sur un device : actuellement, un HIL ou un debugger, prochainement nous pourrions en utiliser d'autres que ces deux derniers.
 
 		Le spécifieur va rédiger des scénarios de stimulation, ceci afin de mettre le contrôleur dans certaines conditions. Son but sera ensuite de vérifier que ces variables restent cohérentes vis-à-vis du scénario effectué. 
 
@@ -60,16 +68,16 @@
 	\subsubsection{Les traces et leurs évaluations}\label{expectedBehavior}
 	Lorsqu'un scénario de stimulation s'exécute, un certain nombre de variables doivent être enregistrées : ces variables sont stockées sous la forme d'une trace au format CSV, qui pourra plus tard être représentée sous forme de courbe. 
 
-	Une fois que la trace est complète, il est nécessaire de l'évaluer : le spécifieur a fournis une \textit{Expected Behavior} détaillant dans quel cas le test est correct, ainsi cette expression va être transformée en arbre logique afin de l'évaluer à tout instant T de la trace. Une fonctionnalité de couverture de tests sera fourni afin de s'assurer qu'un test de sévérité \textit{High} est correctement spécifié.
+	Une fois que la trace est complète, il est nécessaire de l'évaluer : le spécifieur a décrit le comportement attendu dans la colonne \textit{Expected Behavior} détaillant dans quel cas le test est correct, ainsi cette expression va être transformée en arbre logique afin de l'évaluer à tout instant de la trace. Une fonctionnalité de couverture de tests sera fourni afin de s'assurer qu'un test de sévérité \textit{High} est correctement spécifié.
 
-	\subsubsection{Le TestManager}\label{testManager}
-	Le TestManager est le chef d'orchestre de \textit{GreenT}, il a donc un certain nombre de responsabilités. 
+	\subsubsection{Le module TestManager}\label{testManager}
+	Le \texttt{TestManager} est le chef d'orchestre de \textit{GreenT}, il a donc un certain nombre de responsabilités. 
 
 	Il va d'abord organiser les différents tests en un concept que nous avons appelé \textit{Bundle} : afin de limiter le temps d'exécution qui atteindra plusieurs dizaines d'heures, il est intéressant de regrouper les tests possédant les mêmes scénarios de stimulations et les mêmes pré conditions. Seules leur \textit{Expected Behavior} changent, mais celles-ci pourront être évaluées sur la même Trace.
 
 	Une fois les tests organisés en Bundle, il va les compiler et les donner à un \texttt{WorkbenchManager} : toujours pour une raison d'optimisation, il sera intéressant de pouvoir exécuter les enregistrements sur plusieurs bancs simultanément, pour cela le \texttt{TestManager} sera capable de savoir quels bancs peuvent être utilisés et pourra distribuer ses bundles en fonction. 
 
-	Chaque WorkbenchManager sera en charge d'exécuter le code généré plus tôt et dialoguera en réseau avec son banc, une fois l'exécution terminée, il obtiendra une trace qui pourra être évaluée.
+	Chaque \texttt{WorkbenchManager} sera en charge d'exécuter le code généré plus tôt et dialoguera en réseau avec son banc, une fois l'exécution terminée, il obtiendra une trace qui pourra être évaluée.
 
 	Afin d'être le plus souple possible, il existe plusieurs modes d'exécution du \texttt{TestManager} : 
 	\begin{description}
@@ -86,9 +94,9 @@
 		\item Nom du test, de la variable à tester
 		\item Nom du responsable du test
 		\item Sévérité du test
-		\item Pourcentage de branches de l'expectedBehavior renvoyant faux\footnote{Test << Rouge >>}, n'ayant pas pu être testé\footnote{Test << Gris >>} et étant correct\footnote{Test Vert}
+		\item Pourcentage de branches de l'expectedBehavior renvoyant faux(Test << Rouge >>), n'ayant pas pu être testé(Test << Gris >>) et étant correct(Test Vert)
 		\item Le testeur aura à sa disposition les expressions concernées par un résultat Rouge ou Gris.
-		\item Les colonnes utiles du \textit{Walkthrough}
+		\item Les colonnes utiles du \texttt{Walkthrough}
 	\end{itemize}
 
 	Le format du rapport détaillé n'a pas encore été défini, mais cela pourrait être des fichiers textes, avec pour évolution une possibilité de le faire sous format Web avec affichage des courbes de trace par exemple.
@@ -96,14 +104,3 @@
 	\subsubsection{Mise à jour du Walkthrough}
 	Une fois un test exécuté, un résultat sera mis dans le fichier Excel, en fonction de la sévérité du test. En effet, un test \textit{High} ne devra comporter aucune branche non testée contrairement à un test \textit{Low} par exemple.
 	
-	\subsubsection{Schéma de fonctionnement global}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=15.5cm]{contents/images/generalDiag.eps}
-			\caption{Fonctionnement général du parser \textit{GreenT}}
-			\label{fig:generalDig}
-		\end{figure}
-		Dans ce schéma nous pouvons voir les différents modules détaillés précédemment : un type de parser prend en entrée un fichier, qu'il analyse, génère les fichiers Java, les donne au \texttt{TestManager}, qui les organise en \textit{Bundle}, les compile, donne les binaires au \texttt{WorkbenchTestManager}, qui dialogue directement avec le banc, une fois le bundle exécuté, celui-ci retourne la trace. Il ne reste plus qu'a l'analyser et prononcer un verdict.\\
-		Dans des objets ovales sont représentés des fichiers, les carrés représentent des modules de la plateforme et les flèches en pointillés un transfert réseau.
-
-	Pour ma part, je me suis occupé de la partie du parser, du générateur, et j'ai aidé à la conception du système d'évaluation et d'analyses des traces.

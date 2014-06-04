@@ -16,6 +16,7 @@
 \usepackage{multido}
 \usepackage{amssymb}
 \usepackage{float}
+\usepackage{titlebox}
 \usepackage[francais]{minitoc}
 \usepackage[final]{pdfpages} 
 \usepackage{graphicx} % Required for box manipulation
@@ -58,6 +59,7 @@
 	\setcounter{tocdepth}{1}
 	\setcounter{secnumdepth}{2}
 	\setcounter{minitocdepth}{1}
+	
 	\input{styles/frontPage.tex}
 	~\newpage
 	\addcontentsline{toc}{chapter}{Remerciements} 
@@ -71,13 +73,21 @@
 	\vfill
 	~
 	\include{contents/intro}
-	\tableofcontents
-	\include{contents/conti/conti}
-	\include{contents/organization/organization}	
-	\include{contents/problem/problem}
-	\include{contents/greent/greent}
-	\include{contents/bilan/bilan}
+		\dominitoc
 
+	\tableofcontents
+%	\faketableofcontents
+\setcounter{mtc}{2}
+	\input{contents/conti/conti}
+\setcounter{mtc}{3}
+	\include{contents/organization/organization}	
+	\setcounter{mtc}{4}
+	\include{contents/problem/problem}
+	\setcounter{mtc}{5}
+	\include{contents/greent/greent}
+	\setcounter{mtc}{6}
+	\include{contents/bilan/bilan}
+	
 	\appendix
 	\include{annexes/glossary}
 	\include{annexes/templates}

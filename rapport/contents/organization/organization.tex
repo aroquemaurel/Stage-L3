@@ -1,6 +1,17 @@
-\chapter{Organisation du travail}
+\chapter{Organisation du travail}\label{chapOrganization}
+\begin{wrapfigure}{r}{0.60\textwidth}
+\vspace{-25px}
+\begin{minipage}{0.60\textwidth}
+\minitoc
+\end{minipage}
+\end{wrapfigure}
+\'Etant donné la complexité du projet et son importance, une bonne organisation est indispensable. Autant d'un point de vue humain, avec une gestion de projet et une gestion de l'équipe que technique en utilisant certaines technologies nous aidant dans la tache. 
+
+Nous allons voir l'organisation qui a été mise en place afin d'être le plus efficace possible.
+\vspace{-32px}
+
 \section{L'équipe de développement}
-Au cours de mon stage, trois développeurs travaillaient sur le projet \textit{GreenT} : Alain \bsc{Fernandez}, chef d’équipe et membre de l’équipe Vérification et Validation, Olivier \bsc{Ramel}, sous-traitant de chez SII, et moi-même, stagiaire au sein de l’équipe Vérification et Validation.
+Au cours de mon stage, trois développeurs travaillaient sur le projet \textit{GreenT} : Alain \bsc{Fernandez}, chef d’équipe et membre de l’équipe Vérification \& Validation, Olivier \bsc{Ramel}, sous-traitant du groupe SII(Société pour l'informatique industrielle), et moi-même, stagiaire au sein de l’équipe Vérification \& Validation.
 
 En tant que chef d’équipe, Alain \bsc{Fernandez} organisait les réunions et supervisait notre travail tout en développant les tests managers\footnote{Cf \ref{testManager}}. Olivier \bsc{Ramel} se chargeait particulièrement de la partie serveur. Quant à moi je m’occupais de la partie parsing et génération\footnote{Cf \ref{generation}}.
 
@@ -9,7 +20,7 @@ En tant que chef d’équipe, Alain \bsc{Fernandez} organisait les réunions et 
 Ensemble nous avons convenu d’une réunion hebdomadaire tous les lundis matin afin de pouvoir faire un point sur nos avancements ou problèmes. Cela nous a permis d’avoir toujours une bonne vision du projet et de régler, ensemble, les problèmes au fur et à mesure. Pour autant, des réunions ponctuelles ont dû être organisées pour compléter ou revoir la conception en fonction des difficultés rencontrées durant la phase de développement.
 
 \section{Documentation}
-Une documentation, compte rendu des besoins du client et de tous nos choix de conceptions, a été mise en place au travers d’un document au format Word. Ainsi une
+Une documentation, compte rendu des besoins du client et de tous nos choix de conception, a été mise en place au travers d’un document au format \textit{Word}. Ainsi une
 trace de toutes nos réunions et de notre conception est accessible sur un disque réseau. Elle permet à l'équipe de consulter les détails de ce qui avait été décidé plusieurs semaines auparavant.
 
 \section{Outils de développement}
@@ -18,30 +29,30 @@ Afin de travailler de façon efficace, nous avons utilisés des outils aidant au
 \begin{wrapfigure}{r}{2cm}
 	\includegraphics[width=2cm]{contents/images/logoJava.png}
 \end{wrapfigure}
-La partie client de notre plateforme est développée en Java à sa version 6, Java nous permettant d'avoir un langage fortement typé, très puissant au niveau du paradigme Objet, connu de l'équipe, assez simple de déploiement et multiplateforme. 
+La partie client de notre plateforme est développée en Java dans sa version 6.0, Java nous permettant d'avoir un langage fortement typé, très puissant au niveau du paradigme Objet, connu de l'équipe, assez simple de déploiement et multiplateforme. 
 
 Les postes de Continental possédant pour la plupart Java 6, aucune fonctionnalité ultérieur à cette version n'a été utilisé.\\~
 
 \begin{wrapfigure}{l}{2.5cm}
 	\includegraphics[width=2.5cm]{contents/images/logoGit.png}
 \end{wrapfigure}
-Nous avons utilisé Git afin de faciliter le travail collaboratif d'une part, et de versionner le code du logiciel d'autres part. Git permet de fusionner les
+Nous avons utilisé \textit{Git} afin de faciliter le travail collaboratif d'une part, et de versionner le code du logiciel d'autres part. Git permet de fusionner les
 modifications de plusieurs développeurs, tant que nous ne modifions pas le même fichier en même temps. Ainsi, la fusion de nos modifications était faite automatiquement. 
 
-De plus, à chaque fois que nous effectuons une modification, nous faisons un << commit >>, dès lors un point de restauration se créé : il est possible de
-récupérer n'importe quelle version de logiciel depuis son commencement. Nous y insérons un message clair expliquant ce que l'on à fait, cela permet aux autres développeurs de l'équipe de se tenir au courant de l'avancement.
+De plus, à chaque fois modification, un << commit >>, permet de crer un point de restauration : il est alors possible de
+récupérer n'importe quelle version de logiciel depuis son commencement. Nous y insérons un message clair expliquant ce qui a fait, cela permet aux autres développeurs de l'équipe de se tenir au courant de l'avancement.
 
 \begin{wrapfigure}{r}{2.5cm}
 	\includegraphics[width=2.5cm]{contents/images/logoEclipse.png}
 \end{wrapfigure}
-Nous développions tous sous l'IDE\footnote{Integrated Development Tools} Eclipse Kepler, avec le plugin Git et le plugin PyDev. Le plugin Git permet d’avoir des outils aidant à la résolution d’éventuels conflits et le plugin PyDev permet de développer avec l’interpréteur et la coloration syntaxique Python. Je me suis rarement servi de ce dernier, mais il était indispensable pour développer la partie serveur de notre plateforme, qui fonctionne en Python. 
+Nous développions tous sous le même environnement de développement Eclipse Kepler, avec le plugin \textit{Git} et le plugin \textit{PyDev}. Le plugin Git permet d’avoir des outils aidant à la résolution d’éventuels conflits et le plugin PyDev permet de développer avec l’interpréteur et la coloration syntaxique Python. Je me suis rarement servi de ce dernier, mais il était indispensable pour développer la partie serveur de notre plateforme, qui fonctionne en Python. 
 
-Notre plateforme fonctionne avec une architecture client-serveur, le client écrit en Java et le serveur utilise Python. Afin de faire communiquer les deux parties de notre application, nous avons utilisé Apache Thrift. Une bibliothèque ayant pour but les communications réseau inter-langage, dans le même principe que le protocole RMI\footnote{Remote Method Invocation}.
+Notre plateforme fonctionne avec une architecture client-serveur, le client écrit en Java et le serveur utilise Python. Afin de faire communiquer les deux parties de notre application, nous avons utilisé \textit{Apache Thrift}. Une bibliothèque ayant pour but les communications réseau inter-langage, dans le même principe que le protocole RMI\footnote{Remote Method Invocation}.
 
 \begin{wrapfigure}{l}{2.5cm}
 	\includegraphics[width=2.5cm]{contents/images/logoEnterpriseArchitect.png}
 \end{wrapfigure}
-Nous avons travaillé avec la norme UML\footnote{Unified Modelling Language}~2 afin de concevoir la plateforme, en utilisant particulièrement des diagrammes de classes, mais aussi des diagrammes de cas d'utilisations ou d'activité. 
+Nous avons travaillé avec la norme UML\footnote{Unified Modelling Language}~2 afin de concevoir la plateforme, en utilisant particulièrement des diagrammes de classes, mais aussi des diagrammes de cas d'utilisation ou d'activité. 
 
 Pour dessiner ces diagrammes, et les noter dans la documentation, nous les pensions d'abord sur tableau blanc, mais ensuite nous avions besoin d'un outil puissant afin de les dessiner sur informatique. Pour cela nous avons utilisés Enterprise Architect, un logiciel propriétaire permettant de créer tous les diagrammes de la norme UML~2.\\~
 

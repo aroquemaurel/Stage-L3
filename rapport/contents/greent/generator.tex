@@ -16,9 +16,9 @@
 		\begin{wrapfigure}{l}{3cm}
 			\includegraphics[width=3cm]{contents/images/FreeMarker.png}
 		\end{wrapfigure}
-		Les classes que je génère ont un gabarit commun, seule l'implémentation des méthodes change, ainsi plutôt que réécrire systématiquement tout le corps de la classe, il parraissait intéressant d'avoir un moteur de \textit{template}, j'ai choisi FreeMarker.
+		Les classes que je génère ont un gabarit\footnote{\'Egalement appelé \textit{template}} commun, seule l'implémentation des méthodes change, ainsi plutôt que réécrire systématiquement tout le corps de la classe, il parraissait intéressant d'avoir un moteur de \textit{template}, j'ai choisi FreeMarker.
 
-		J'ai développé un fichier gabarait utilisant le format FreeMarker, à l'interieur de ce gabarit, j'utilise des objets. Lors de la sérialisation, je fournis les valeurs des objets concernés, l'adresse du gabarit, le fichier \texttt{.java} est ensuite généré par FreeMarker.
+		J'ai développé un fichier gabarit utilisant le format \textit{FreeMarker}, à l'interieur de celui-ci, j'utilise des objets. Lors de la sérialisation, je fournis les valeurs des objets concernés, l'adresse du fichier \textit{template}, le fichier \texttt{.java} est ensuite généré par FreeMarker.
 
 		Deux fichiers de templates ont été nécessaire : un pour les stim, et un pour le \textit{GreenTTest}. En effet un precondstim et un stimscenario n'ont que peu de différence, il était donc possible de les regrouper avec le même template.
 

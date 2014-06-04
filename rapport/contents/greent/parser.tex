@@ -3,7 +3,7 @@
 
 	\subsection{La grammaire}\label{specParser}
 	\subsubsection{Les scénarios de stimulations}
-	Un \textit{precondstim} peut contenir des affectations, des \textit{check} et des actions débugger : 
+	Une précondition de stimulations, notée \textit{precondstim} peut contenir des affectations, des \textit{check} et des actions debugger : 
 	\begin{description}
 		\item[Affectation] Une affectation s'effectue de la façon suivante : \texttt{Alias = valeur}, l'alias \texttt{Alias} possédera ensuite la valeur \texttt{valeur}.
 		\item[Check] Cette action permet de vérifier qu'un alias possède bien la valeur espérée, à une tolérance prés. Dans le cas contraire le bundle ne pourra pas être exécuté et une exception sera levée. Cela s'effectue ainsi : \texttt{CHECK(Alias = Valeur, TOLRES(tolerance))}, la tolerance étant facultative.
@@ -11,7 +11,7 @@
 		\texttt{T32\_CPU\_STOP}.
 	\end{description}
 
-	Les scénarios de stimulations quant-à eux ont le même fonctionnement, la seule différence est qu'ils doivent être encadrés des balises \texttt{BEGIN SCENARIO nomScenario} et \texttt{END SCENARIO}.
+	Les scénarios de stimulations, notés \textit{precondstim} quant-à eux ont le même fonctionnement, la seule différence est qu'ils doivent être encadrés des balises \texttt{BEGIN SCENARIO nomScenario} et \texttt{END SCENARIO}.
 
 	\subsubsection{Le fichier cnf}
 	Comme nous l'avons expliqué, les tests sont spécifiés dans le fichier \textit{Walkthrough} qui est au format Excel, étant donné la difficulté d'éditer de longs texte dans la même cellule, il parait important de mettre les scénarios de stimulations dans un autre fichier : c'est l'utilité du fichier cnf, celui-ci contiendra des groupes d'actions à effectuer, spécifiés par un nom\footnote{Cela pourrait s'approcher du fonctionnement de sous-programmes} : le fichier Excel pourra ainsi ne contenir que le nom du groupe d'action, et de la place sera gagnée dans la cellule.
@@ -49,8 +49,8 @@ Il y a une différence sémantique entre \texttt{TOLRES} et \texttt{TOLPER} : \t
 \end{remarque}
 Un simple appel à \texttt{SUB\_ECU\_GO} dans le fichier Excel fera les actions nécessaires. Cette approche permet de gagner de la place comme indiqué, mais elle permet aussi de factoriser les tests !
 
-	\subsubsection{Les expected Behavior}
-Comme expliqué précédemment, les Expected Behavior sont des expressions permettant d'évaluer une trace, celles-ci ont une syntaxe proche d'un langage algorithmique : 
+	\subsubsection{Les \textit{Expected Behavior}}
+Comme expliqué précédemment, les \textit{Expected Behavior} sont des expressions permettant d'évaluer une trace, celles-ci ont une syntaxe proche d'un langage algorithmique : 
 \begin{lstlisting}[caption=Exemple d'expected Behavior, language=Algo]
 if tco > c1 then 
 	EVAL(lv_cfa = 1)
@@ -174,7 +174,7 @@ Nous pouvons les dissocier en deux types d'exceptions : les erreurs de syntaxe e
 \paragraph{Erreurs de syntaxe} Ces erreurs sont en partie gérées par Antlr, c'est purement syntaxique tel que l'oubli d'un caractère, cependant les erreurs Antlr
 n'étant pas claires, j'ai surchargé leurs méthodes d'affichage d'une part, afin d'avoir un affichage comme montré ci-dessous, mais j'ai également surchargé leurs gestionnaires afin de renvoyer une exception, ce qui n'était pas fait précédemment. L'envoi d'une exception permet de traiter le problème plus haut : c'est le \texttt{TestManager} qui la traitera.
 \begin{lstlisting}[caption=Affichage d'une erreur de syntaxe, numbers=none]
-line 34:10 mismatched input '0' expecting ';'
+line 34:10 mismatched input '0' expecting '='
 HIL_VB  0;
        ^
 \end{lstlisting}
@@ -192,4 +192,3 @@ Error: Alias unknown [HL_VSd, Alias, Test]
 Error: Alias not readable [HIL_VS, HIL_VB]
 Error: Alias not writable [HIL_VS_OUT, HIL_VB_OUT]
 \end{lstlisting}
-	s	
