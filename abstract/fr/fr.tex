@@ -5,7 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english,francais]{babel}
-\usepackage[top=1.8cm, bottom=1.8cm, left=1.8cm, right=1.8cm]{geometry}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{verbatim}
 \usepackage{tikz} %Vectoriel
 \usepackage{marvosym}
@@ -33,34 +33,34 @@
 \selectlanguage{francais}
 	\maketitle
 	Dans le cadre de ma formation en troisième année de licence à l'université Toulouse III -- Paul Sabatier, j'ai eu le choix entre effectuer un TER ou un
-	stage.  J'ai choisi la seconde option car je me sens plus attiré par le monde de l'entreprise que par la recherche. J'ai eu la chance d’avoir une opportunité de stage de trois mois dans l'entreprise Continental Automotive au sein de l'équipe Vérification et Validation pour un projet de développement
+	stage.  J'ai choisi la seconde option car je me sens plus attiré par le monde de l'entreprise que par la recherche. J'ai eu la chance d’avoir une opportunité de stage de trois mois dans l'entreprise Continental Automotive au sein de l'équipe Vérification \& Validation pour un projet de développement
 	d'une plateforme de tests de logiciels embarqués.\\~
 
-	L'entreprise Continental est une Société Allemande leader de l'automobile possédant plus de 163000 employés dans le monde. Pour ma part j'ai travaillé au
-	sein de l'équipe en charge de la vérification et de la validation des logiciels, ceci en développant des scripts de tests de non régression automatique avant la
+	L'entreprise Continental est une Société Allemande leader de l'automobile possédant plus de 163000 employés dans le monde. L'entreprise s'occupe aussi bien des calculateurs que de la sécurité automobile, du système d'injection, \ldots \\
+	Pour ma part j'ai travaillé au
+	sein de l'équipe en charge de la vérification et de la validation des logiciels, ceci en développant des scripts de tests automatique de non-régression ou d'intégration avant la
 	livraison des projets.
 
 	Il y a un an, un besoin a été exprimé : pouvoir tester de façon rapide et efficace l'intégration d'un << \textit{plugin} >>, un bout de code sous forme
 	d'objet,  au sein des applicatifs d'un calculateur de contrôle moteur. La mission de l'équipe vérification \& Validation est de permettre de tester la bonne intégration
-	de ce plugin dans l'applicatif du calculateur, pour cela le développement d'une plateforme de tests est nécessaire.
-
-	Continental possède des bancs de tests : ces bancs permettent de simuler un environnement véhicule autour du
-	contrôleur afin de vérifier ses réactions en fonction des différentes conditions qui peuvent arriver, cela leur permet de tester la réaction du calculateur.
+	de ce plugin avec les logiciels Continental. Pour cela le développement d'une plateforme de tests est nécessaire.
 
 	Lors de mon arrivée cette plateforme, appelée \textit{GreenT}, était en partie conçue, je suis donc arrivé en pleine phases de conception et de codage : de
 	codage en raison des délais qui était court, mais de conception tout de même, car certaines parties restaient à faire.\\
 	Afin de pouvoir tester la bonne intégration du plugin, le client fourni un fichier \textit{Excel} appelé \texttt{Walkthrough} contenant la liste des variables du plugin avec
 toutes leur spécifications. Le testeur va ajouter des colonnes à ce fichier afin de spécifier le fonctionnement du test, notre plateforme sera ensuite
-	capable d'analyser le fichier, et de générer les cas de tests qui s'exécuteront à distance sur un ou plusieurs bancs.
+	capable d'analyser le fichier, et de générer les cas de tests qui s'exécuteront à distance sur un ou plusieurs bancs de tests : 
+		ils simulent un environnement véhicule autour du
+	contrôleur afin de vérifier ses réactions en fonction des différentes conditions qui peuvent arriver.
 
 	J'ai participé à une partie du développement \textit{GreenT} : le parsing du fichier et la génération des tests associés, ceci en utilisant le maximum d'outils à ma
 	disposition afin d'effectuer rapidement un travail fiable et robuste. J'ai utilisé \textit{Antlr} permettant d'effectuer un parser simplement une fois
 	une grammaire définie, et \textit{FreeMaker} permettant de générer plus facilement le code.\\~
 
 	Bien que mon stage ne soit pas encore terminé, celui-ci se prolongeant jusqu'à mi-juillet, mon travail dans ce stage est bénéfique, pour l'entreprise grâce à
-	mon regard neuf, mon aide à la conception et au développement de la partie parsing et génération. Mais aussi personnellement, grâce à une nouvelle expérience
-	technique avec la conception. Trouver des solutions à des problèmes ou développer un modèle avec les autres membres de l'équipes m'ont appris beaucoup de
-	choses! Mais aussi humaine grâce au travail en équipe, aux comptes rendus hebdomadaires qui m'ont permis d'apprendre à synthétiser mon travail.
+	mon regard neuf, mon aide à la conception et au développement de la partie parsing et génération.\\
+	Mais aussi personnellement, d'un point de vue technique, avec la conception, en trouvant des solutions à des problèmes ou en développant un modèle avec les autres membres de l'équipes m'ont appris beaucoup de
+	choses! Et d'un point de vue humain grâce au travail en équipe, aux comptes rendus hebdomadaires qui m'ont permis d'apprendre à synthétiser mon travail.
 
 	Ce stage me réconforte dans l'idée d'effectuer un Master Développement Logiciel, cette partie de l'informatique m'intéressant particulièrement.
 
