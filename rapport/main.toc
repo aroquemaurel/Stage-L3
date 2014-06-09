@@ -39,7 +39,7 @@
 \contentsline {subsubsection}{Les sc\IeC {\'e}narios de stimulations}{24}{section*.12}
 \contentsline {subsubsection}{Le fichier cnf}{24}{section*.13}
 \contentsline {subsubsection}{Les \textit {Expected Behavior}}{25}{section*.14}
-\contentsline {subsubsection}{Les alias locaux}{26}{section*.15}
+\contentsline {subsubsection}{Les alias locaux}{25}{section*.15}
 \contentsline {subsubsection}{Variables \IeC {\`a} enregistrer}{26}{section*.16}
 \contentsline {subsection}{\numberline {4.2.2}Impl\IeC {\'e}mentation du parser}{26}{subsection.4.2.2}
 \contentsline {subsubsection}{La grammaire : utilisation de Antlr}{26}{section*.17}
@@ -50,7 +50,7 @@
 \contentsline {paragraph}{Erreurs de syntaxe}{29}{section*.19}
 \contentsline {paragraph}{Erreurs d'alias}{29}{lstnumber.4.8.3}
 \contentsline {section}{\numberline {4.3}Le g\IeC {\'e}n\IeC {\'e}rateur}{29}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}G\IeC {\'e}n\IeC {\'e}ration des tests}{30}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}G\IeC {\'e}n\IeC {\'e}ration des tests}{29}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Le moteur de template : freemarker}{30}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}L'analyse des traces et la prononciation du verdict}{31}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Arbre de l'expectedBehavior}{31}{subsection.4.4.1}
@@ -58,13 +58,18 @@
 \contentsline {subsection}{\numberline {4.4.3}Prononciation du verdict}{33}{subsection.4.4.3}
 \contentsline {chapter}{\numberline {5}Bilans}{35}{chapter.5}
 \contentsline {section}{\numberline {5.1}Bilan pour Continental}{35}{section.5.1}
-\contentsline {section}{\numberline {5.2}Bilan personnel}{35}{section.5.2}
+\contentsline {section}{\numberline {5.2}Bilan personnel}{36}{section.5.2}
 \contentsline {chapter}{\numberline {A}Acronymes et Glossaire}{37}{appendix.A}
-\contentsline {chapter}{\numberline {B}Templates}{39}{appendix.B}
-\contentsline {section}{\numberline {B.1}Template des stimulations}{39}{section.B.1}
-\contentsline {section}{\numberline {B.2}Template d'un \texttt {GreenTTest}}{41}{section.B.2}
-\contentsline {chapter}{\numberline {C}Exemples de fichiers g\IeC {\'e}n\IeC {\'e}r\IeC {\'e}s}{43}{appendix.C}
-\contentsline {section}{\numberline {C.1}Exemple de StimScenario}{43}{section.C.1}
-\contentsline {section}{\numberline {C.2}Exemple de \texttt {GreenTTest}}{45}{section.C.2}
-\contentsline {chapter}{\numberline {D}Liste des codes sources}{47}{appendix.D}
-\contentsline {chapter}{\numberline {E}Table des figures}{49}{appendix.E}
+\contentsline {chapter}{\numberline {B}R\IeC {\'e}f\IeC {\'e}rences}{39}{appendix.B}
+\contentsline {section}{\numberline {B.1}Documentations en-ligne}{39}{section.B.1}
+\contentsline {section}{\numberline {B.2}Livres}{39}{section.B.2}
+\contentsline {section}{\numberline {B.3}Cours magistraux}{39}{section.B.3}
+\contentsline {section}{\numberline {B.4}Sites Web et forums}{40}{section.B.4}
+\contentsline {chapter}{\numberline {C}Templates}{41}{appendix.C}
+\contentsline {section}{\numberline {C.1}Template des stimulations}{41}{section.C.1}
+\contentsline {section}{\numberline {C.2}Template d'un \texttt {GreenTTest}}{43}{section.C.2}
+\contentsline {chapter}{\numberline {D}Exemples de fichiers g\IeC {\'e}n\IeC {\'e}r\IeC {\'e}s}{45}{appendix.D}
+\contentsline {section}{\numberline {D.1}Exemple de StimScenario}{45}{section.D.1}
+\contentsline {section}{\numberline {D.2}Exemple de \texttt {GreenTTest}}{47}{section.D.2}
+\contentsline {chapter}{\numberline {E}Liste des codes sources}{49}{appendix.E}
+\contentsline {chapter}{\numberline {F}Table des figures}{51}{appendix.F}

@@ -42,6 +42,11 @@
 \input{styles/affichageChapitre.tex}
 \input{styles/headers.tex}
 
+\mtcsettitle{minitoc}{\hfill Sommaire}
+\mtcsetrules{minitoc}{off}
+\mtcsetfeature{minitoc}{before}{\vspace{0pt}}% à ajuster
+\mtcsetfeature{minitoc}{after}{\vspace{-25pt}}% à ajuster
+
 \makeatother
 \includeonly {
 	contents/intro,
@@ -52,6 +57,7 @@
 	contents/bilan/bilan,
 %
 	annexes/glossary,
+	annexes/references,	
 	annexes/templates,
 	annexes/generatesFiles
 }
@@ -90,6 +96,7 @@
 	
 	\appendix
 	\include{annexes/glossary}
+	\include{annexes/references}
 	\include{annexes/templates}
 	\include{annexes/generatesFiles}
 	\lstlistoflistings
