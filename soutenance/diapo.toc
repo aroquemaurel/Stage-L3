@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.33pt}
+\beamer@endinputifotherversion {3.10pt}
 \select@language {french}
 \beamer@sectionintoc {2}{L'entreprise}{4}{0}{1}
 \beamer@subsectionintoc {2}{1}{Continental}{5}{0}{1}
