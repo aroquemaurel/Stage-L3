@@ -327,7 +327,7 @@
 \end{frame}
 \subsection{Parser et g\'en\'erateur}
 \begin{frame}{Parser : utilisation de Antlr}
-	Parser: 
+~\vspace{-30px}
 \begin{wrapfigure}{r}{1.5cm}
 	\includegraphics[width=1.5cm]{antlr.jpg}
 \end{wrapfigure}
@@ -338,20 +338,23 @@
 				\item Scénarios et \textit{Excepted Behavior}
 				\item Arbre d'évaluation généré automatiquement par Antlr
 			\end{itemize}
-			\footnotesize
-			\normalsize
-			\pause
-		\item Parcours de l'arbre
+		\item Parcours de l'arbre. 
 			\begin{itemize}
-				\item Appel du générateur au niveau des feuilles
-				\item Utilise les n\oe{}uds pour connaître le contexte  
+				\item Appel du générateur
+				\item Utilise les n\oe{}uds pour connaître le contexte\newline 
+				\scriptsize Exemple : \texttt{CHECK(HIL\_VB = 13, TOLRES(1))}
 			\end{itemize}
 	\end{itemize}
-	\vfill
-	\pause
-	Gestion des exceptions:\newline
-	\hspace{20px}
-	$\rightarrow$ Avant la phase d'exécution des tests: 
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=6cm]{treeCheck.eps}
+		\caption{Exemple d'arbre d'évaluation}
+	\end{figure}
+	\end{frame}
+	\begin{frame}{Gestion des exceptions}
+	\footnotesize
+	Avant la phase d'exécution des tests: 
+	\normalsize
 			\begin{itemize}
 					\vspace{-10px}
 		\item Erreur de syntaxe

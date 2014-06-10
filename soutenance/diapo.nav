@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.10pt}
+\beamer@endinputifotherversion {3.33pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}
@@ -34,6 +34,7 @@
 \headcommand {\beamer@subsectionentry {0}{4}{1}{15}{Fonctionnement g\'en\'eral}}\headcommand {\beamer@subsectionpages {14}{14}}
 \headcommand {\slideentry {4}{1}{1}{15/15}{Fonctionnement g\'en\'eral}{0}}
 \headcommand {\beamer@framepages {15}{15}}
+<<<<<<< HEAD
 \headcommand {\slideentry {4}{1}{2}{16/23}{Fonctionnement g\'en\'eral}{0}}
 \headcommand {\beamer@framepages {16}{23}}
 \headcommand {\slideentry {4}{1}{3}{24/24}{Fonctionnement g\'en\'eral}{0}}
@@ -58,4 +59,30 @@
 \headcommand {\beamer@subsectionpages {32}{42}}
 \headcommand {\beamer@sectionpages {32}{42}}
 \headcommand {\beamer@documentpages {42}}
+=======
+\headcommand {\slideentry {4}{1}{2}{16/18}{Fonctionnement g\'en\'eral}{0}}
+\headcommand {\beamer@framepages {16}{18}}
+\headcommand {\slideentry {4}{1}{3}{19/19}{Fonctionnement g\'en\'eral}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {4}{1}{4}{20/20}{Fonctionnement g\'en\'eral}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{21}{Parser et g\'en\'erateur}}\headcommand {\beamer@subsectionpages {15}{20}}
+\headcommand {\slideentry {4}{2}{1}{21/22}{Parser et g\'en\'erateur}{0}}
+\headcommand {\beamer@framepages {21}{22}}
+\headcommand {\slideentry {4}{2}{2}{23/23}{Parser et g\'en\'erateur}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {4}{2}{3}{24/26}{Parser et g\'en\'erateur}{0}}
+\headcommand {\beamer@framepages {24}{26}}
+\headcommand {\sectionentry {5}{Conclusion}{27}{Conclusion}{0}}
+\headcommand {\beamer@sectionpages {14}{26}}
+\headcommand {\beamer@subsectionpages {21}{26}}
+\headcommand {\slideentry {5}{0}{4}{27/35}{}{0}}
+\headcommand {\beamer@framepages {27}{35}}
+\headcommand {\slideentry {5}{0}{5}{36/36}{}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\beamer@partpages {1}{36}}
+\headcommand {\beamer@subsectionpages {27}{36}}
+\headcommand {\beamer@sectionpages {27}{36}}
+\headcommand {\beamer@documentpages {36}}
+>>>>>>> 21a4b3697b9aba9fe4f6edf4cf2d5652883217cf
 \headcommand {\def \inserttotalframenumber {18}}
