@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.1)  5 JUN 2014 23:05
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.1)  9 JUN 2014 21:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1379,6 +1379,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\newline' on input line 60.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\newline' on input line 60.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\new@ifnextchar' on input line 127.
 
 (./diapo.aux)
@@ -1771,7 +1779,7 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 ]
 File: ups.jpg Graphic file (type jpg)
  <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 244.
+Package pdftex.def Info: ups.jpg used on input line 247.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -1788,7 +1796,7 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 ]
 File: ups.jpg Graphic file (type jpg)
  <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 244.
+Package pdftex.def Info: ups.jpg used on input line 247.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -1805,7 +1813,7 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 ] (./diapo.toc)
 File: ups.jpg Graphic file (type jpg)
  <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 246.
+Package pdftex.def Info: ups.jpg used on input line 249.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -1820,9 +1828,25 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 [14
 
 ]
+Package epstopdf Info: Source file: <fct.eps>
+(epstopdf)                    date: 2014-06-09 14:51:19
+(epstopdf)                    size: 13464926 bytes
+(epstopdf)             Output file: <fct-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:01
+(epstopdf)                    size: 79431 bytes
+(epstopdf)             Command: <repstopdf --outfile=fct-eps-converted-to.pdf f
+ct.eps>
+(epstopdf)             \includegraphics on input line 270.
+Package epstopdf Info: Output file is already uptodate.
+ <fct-eps-converted-to.pdf, id=326, 687.56876pt x 130.4875pt>
+File: fct-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fct-eps-converted-to.pdf>
+Package pdftex.def Info: fct-eps-converted-to.pdf used on input line 270.
+(pdftex.def)             Requested size: 241.84842pt x 45.89828pt.
 File: ups.jpg Graphic file (type jpg)
  <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 258.
+Package pdftex.def Info: ups.jpg used on input line 270.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -1836,10 +1860,36 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 
 [15
 
-]
+ <./fct-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <exe1.eps>
+(epstopdf)                    date: 2014-06-09 18:15:57
+(epstopdf)                    size: 65919 bytes
+(epstopdf)             Output file: <exe1-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:01
+(epstopdf)                    size: 27820 bytes
+(epstopdf)             Command: <repstopdf --outfile=exe1-eps-converted-to.pdf 
+exe1.eps>
+(epstopdf)             \includegraphics on input line 312.
+Package epstopdf Info: Output file is already uptodate.
+
+<exe1-eps-converted-to.pdf, id=350, 973.6375pt x 339.2675pt>
+File: exe1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use exe1-eps-converted-to.pdf>
+Package pdftex.def Info: exe1-eps-converted-to.pdf used on input line 312.
+(pdftex.def)             Requested size: 270.30118pt x 94.18666pt.
+
+Overfull \hbox (1.1585pt too wide) in paragraph at lines 312--312
+ [] 
+ []
+
+
+Overfull \vbox (13.00923pt too high) detected at line 312
+ []
+
 File: ups.jpg Graphic file (type jpg)
- <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 282.
+<use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 312.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -1853,10 +1903,33 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 
 [16
 
-]
+ <./exe1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <exe1.eps>
+(epstopdf)                    date: 2014-06-09 18:15:57
+(epstopdf)                    size: 65919 bytes
+(epstopdf)             Output file: <exe1-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:01
+(epstopdf)                    size: 27820 bytes
+(epstopdf)             Command: <repstopdf --outfile=exe1-eps-converted-to.pdf 
+exe1.eps>
+(epstopdf)             \includegraphics on input line 312.
+Package epstopdf Info: Output file is already uptodate.
+File: exe1-eps-converted-to.pdf Graphic file (type pdf)
+ <use exe1-eps-converted-to.pdf>
+Package pdftex.def Info: exe1-eps-converted-to.pdf used on input line 312.
+(pdftex.def)             Requested size: 270.30118pt x 94.18666pt.
+
+Overfull \hbox (1.1585pt too wide) in paragraph at lines 312--312
+ [] 
+ []
+
+
+Overfull \vbox (13.00923pt too high) detected at line 312
+ []
+
 File: ups.jpg Graphic file (type jpg)
- <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 282.
+<use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 312.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -1871,9 +1944,34 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 [17
 
 ]
+Package epstopdf Info: Source file: <exe2.eps>
+(epstopdf)                    date: 2014-06-09 18:15:39
+(epstopdf)                    size: 65919 bytes
+(epstopdf)             Output file: <exe2-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:02
+(epstopdf)                    size: 27813 bytes
+(epstopdf)             Command: <repstopdf --outfile=exe2-eps-converted-to.pdf 
+exe2.eps>
+(epstopdf)             \includegraphics on input line 312.
+Package epstopdf Info: Output file is already uptodate.
+ <exe2-eps-converted-to.pdf, id=387, 973.6375pt x 339.2675pt>
+File: exe2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use exe2-eps-converted-to.pdf>
+Package pdftex.def Info: exe2-eps-converted-to.pdf used on input line 312.
+(pdftex.def)             Requested size: 270.30118pt x 94.18666pt.
+
+Overfull \hbox (1.1585pt too wide) in paragraph at lines 312--312
+ [] 
+ []
+
+
+Overfull \vbox (13.00923pt too high) detected at line 312
+ []
+
 File: ups.jpg Graphic file (type jpg)
- <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 282.
+<use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 312.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -1887,36 +1985,33 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 
 [18
 
-]
-Package epstopdf Info: Source file: <generalDiag.eps>
-(epstopdf)                    date: 2014-06-04 20:18:29
-(epstopdf)                    size: 380701 bytes
-(epstopdf)             Output file: <generalDiag-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-06-04 20:18:51
-(epstopdf)                    size: 112848 bytes
-(epstopdf)             Command: <repstopdf --outfile=generalDiag-eps-converted-
-to.pdf generalDiag.eps>
-(epstopdf)             \includegraphics on input line 290.
+ <./exe2-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <exe2.eps>
+(epstopdf)                    date: 2014-06-09 18:15:39
+(epstopdf)                    size: 65919 bytes
+(epstopdf)             Output file: <exe2-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:02
+(epstopdf)                    size: 27813 bytes
+(epstopdf)             Command: <repstopdf --outfile=exe2-eps-converted-to.pdf 
+exe2.eps>
+(epstopdf)             \includegraphics on input line 312.
 Package epstopdf Info: Output file is already uptodate.
- <generalDiag-eps-converted-to.pdf, id=386, 1155.31625pt x 757.83125pt>
-File: generalDiag-eps-converted-to.pdf Graphic file (type pdf)
+File: exe2-eps-converted-to.pdf Graphic file (type pdf)
+ <use exe2-eps-converted-to.pdf>
+Package pdftex.def Info: exe2-eps-converted-to.pdf used on input line 312.
+(pdftex.def)             Requested size: 270.30118pt x 94.18666pt.
 
-<use generalDiag-eps-converted-to.pdf>
-Package pdftex.def Info: generalDiag-eps-converted-to.pdf used on input line 29
-0.
-(pdftex.def)             Requested size: 284.52756pt x 186.63583pt.
-
-Overfull \hbox (15.38487pt too wide) in paragraph at lines 290--290
+Overfull \hbox (1.1585pt too wide) in paragraph at lines 312--312
  [] 
  []
 
 
-Overfull \vbox (15.9129pt too high) detected at line 290
+Overfull \vbox (13.00923pt too high) detected at line 312
  []
 
 File: ups.jpg Graphic file (type jpg)
 <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 290.
+Package pdftex.def Info: ups.jpg used on input line 312.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -1930,36 +2025,74 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 
 [19
 
- <./generalDiag-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <generalDiag.eps>
-(epstopdf)                    date: 2014-06-04 20:18:29
-(epstopdf)                    size: 380701 bytes
-(epstopdf)             Output file: <generalDiag-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-06-04 20:18:51
-(epstopdf)                    size: 112848 bytes
-(epstopdf)             Command: <repstopdf --outfile=generalDiag-eps-converted-
-to.pdf generalDiag.eps>
-(epstopdf)             \includegraphics on input line 297.
-Package epstopdf Info: Output file is already uptodate.
-File: generalDiag-eps-converted-to.pdf Graphic file (type pdf)
-
-<use generalDiag-eps-converted-to.pdf>
-Package pdftex.def Info: generalDiag-eps-converted-to.pdf used on input line 29
-7.
-(pdftex.def)             Requested size: 364.19536pt x 238.89156pt.
- [20
-
 ]
-<antlr.jpg, id=410, 190.7125pt x 190.7125pt>
-File: antlr.jpg Graphic file (type jpg)
- <use antlr.jpg>
-Package pdftex.def Info: antlr.jpg used on input line 331.
-(pdftex.def)             Requested size: 42.67912pt x 42.67856pt.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 331.
+Package epstopdf Info: Source file: <exe3.eps>
+(epstopdf)                    date: 2014-06-09 18:15:22
+(epstopdf)                    size: 65983 bytes
+(epstopdf)             Output file: <exe3-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:02
+(epstopdf)                    size: 27815 bytes
+(epstopdf)             Command: <repstopdf --outfile=exe3-eps-converted-to.pdf 
+exe3.eps>
+(epstopdf)             \includegraphics on input line 312.
+Package epstopdf Info: Output file is already uptodate.
+ <exe3-eps-converted-to.pdf, id=421, 973.6375pt x 339.2675pt>
+File: exe3-eps-converted-to.pdf Graphic file (type pdf)
+
+<use exe3-eps-converted-to.pdf>
+Package pdftex.def Info: exe3-eps-converted-to.pdf used on input line 312.
+(pdftex.def)             Requested size: 270.30118pt x 94.18666pt.
+
+Overfull \hbox (1.1585pt too wide) in paragraph at lines 312--312
+ [] 
+ []
+
+
+Overfull \vbox (13.00923pt too high) detected at line 312
+ []
+
 File: ups.jpg Graphic file (type jpg)
- <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 331.
+<use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 312.
+(pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
+
+Overfull \hbox (72.59995pt too wide) has occurred while \output is active
+[] [][] 
+ []
+
+
+Overfull \hbox (2.80698pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[20
+
+ <./exe3-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <exe4.eps>
+(epstopdf)                    date: 2014-06-09 18:15:04
+(epstopdf)                    size: 66047 bytes
+(epstopdf)             Output file: <exe4-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:02
+(epstopdf)                    size: 27822 bytes
+(epstopdf)             Command: <repstopdf --outfile=exe4-eps-converted-to.pdf 
+exe4.eps>
+(epstopdf)             \includegraphics on input line 312.
+Package epstopdf Info: Output file is already uptodate.
+
+<exe4-eps-converted-to.pdf, id=439, 973.6375pt x 339.2675pt>
+File: exe4-eps-converted-to.pdf Graphic file (type pdf)
+
+<use exe4-eps-converted-to.pdf>
+Package pdftex.def Info: exe4-eps-converted-to.pdf used on input line 312.
+(pdftex.def)             Requested size: 270.30118pt x 94.18666pt.
+
+Overfull \hbox (1.1585pt too wide) in paragraph at lines 312--312
+ [] 
+ []
+
+File: ups.jpg Graphic file (type jpg)
+<use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 312.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -1973,14 +2106,29 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 
 [21
 
- <./antlr.jpg>]
-File: antlr.jpg Graphic file (type jpg)
- <use antlr.jpg>
-Package pdftex.def Info: antlr.jpg used on input line 331.
-(pdftex.def)             Requested size: 42.67912pt x 42.67856pt.
+ <./exe4-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <exe4.eps>
+(epstopdf)                    date: 2014-06-09 18:15:04
+(epstopdf)                    size: 66047 bytes
+(epstopdf)             Output file: <exe4-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:02
+(epstopdf)                    size: 27822 bytes
+(epstopdf)             Command: <repstopdf --outfile=exe4-eps-converted-to.pdf 
+exe4.eps>
+(epstopdf)             \includegraphics on input line 312.
+Package epstopdf Info: Output file is already uptodate.
+File: exe4-eps-converted-to.pdf Graphic file (type pdf)
+ <use exe4-eps-converted-to.pdf>
+Package pdftex.def Info: exe4-eps-converted-to.pdf used on input line 312.
+(pdftex.def)             Requested size: 270.30118pt x 94.18666pt.
+
+Overfull \hbox (1.1585pt too wide) in paragraph at lines 312--312
+ [] 
+ []
+
 File: ups.jpg Graphic file (type jpg)
- <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 331.
+<use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 312.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -1994,19 +2142,31 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 
 [22
 
-] <FreeMaker.png, id=440, 167.95142pt x 26.46507pt>
-File: FreeMaker.png Graphic file (type png)
- <use FreeMaker.png>
-Package pdftex.def Info: FreeMaker.png used on input line 354.
-(pdftex.def)             Requested size: 42.67912pt x 6.72487pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 354.
+]
+Package epstopdf Info: Source file: <exe5.eps>
+(epstopdf)                    date: 2014-06-09 18:14:34
+(epstopdf)                    size: 66079 bytes
+(epstopdf)             Output file: <exe5-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:03
+(epstopdf)                    size: 27801 bytes
+(epstopdf)             Command: <repstopdf --outfile=exe5-eps-converted-to.pdf 
+exe5.eps>
+(epstopdf)             \includegraphics on input line 312.
+Package epstopdf Info: Output file is already uptodate.
+ <exe5-eps-converted-to.pdf, id=472, 973.6375pt x 339.2675pt>
+File: exe5-eps-converted-to.pdf Graphic file (type pdf)
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
+<use exe5-eps-converted-to.pdf>
+Package pdftex.def Info: exe5-eps-converted-to.pdf used on input line 312.
+(pdftex.def)             Requested size: 270.30118pt x 94.18666pt.
+
+Overfull \hbox (1.1585pt too wide) in paragraph at lines 312--312
+ [] 
+ []
+
 File: ups.jpg Graphic file (type jpg)
- <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 354.
+<use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 312.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -2020,14 +2180,33 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 
 [23
 
- <./FreeMaker.png>]
-File: FreeMaker.png Graphic file (type png)
- <use FreeMaker.png>
-Package pdftex.def Info: FreeMaker.png used on input line 354.
-(pdftex.def)             Requested size: 42.67912pt x 6.72487pt.
+ <./exe5-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <generalDiag.eps>
+(epstopdf)                    date: 2014-06-09 15:03:58
+(epstopdf)                    size: 9988354 bytes
+(epstopdf)             Output file: <generalDiag-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:06
+(epstopdf)                    size: 140513 bytes
+(epstopdf)             Command: <repstopdf --outfile=generalDiag-eps-converted-
+to.pdf generalDiag.eps>
+(epstopdf)             \includegraphics on input line 320.
+Package epstopdf Info: Output file is already uptodate.
+
+<generalDiag-eps-converted-to.pdf, id=491, 1057.9525pt x 591.20876pt>
+File: generalDiag-eps-converted-to.pdf Graphic file (type pdf)
+
+<use generalDiag-eps-converted-to.pdf>
+Package pdftex.def Info: generalDiag-eps-converted-to.pdf used on input line 32
+0.
+(pdftex.def)             Requested size: 284.52756pt x 158.99701pt.
+
+Overfull \hbox (15.38487pt too wide) in paragraph at lines 320--320
+ [] 
+ []
+
 File: ups.jpg Graphic file (type jpg)
- <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 354.
+<use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 320.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -2041,31 +2220,36 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 
 [24
 
-]
-File: FreeMaker.png Graphic file (type png)
- <use FreeMaker.png>
-Package pdftex.def Info: FreeMaker.png used on input line 354.
-(pdftex.def)             Requested size: 42.67912pt x 6.72487pt.
-File: ups.jpg Graphic file (type jpg)
- <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 354.
-(pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
+ <./generalDiag-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <generalDiag.eps>
+(epstopdf)                    date: 2014-06-09 15:03:58
+(epstopdf)                    size: 9988354 bytes
+(epstopdf)             Output file: <generalDiag-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:06
+(epstopdf)                    size: 140513 bytes
+(epstopdf)             Command: <repstopdf --outfile=generalDiag-eps-converted-
+to.pdf generalDiag.eps>
+(epstopdf)             \includegraphics on input line 327.
+Package epstopdf Info: Output file is already uptodate.
+File: generalDiag-eps-converted-to.pdf Graphic file (type pdf)
 
-Overfull \hbox (72.59995pt too wide) has occurred while \output is active
-[] [][] 
- []
-
-
-Overfull \hbox (2.80698pt too wide) has occurred while \output is active
-[][] 
- []
-
-[25
+<use generalDiag-eps-converted-to.pdf>
+Package pdftex.def Info: generalDiag-eps-converted-to.pdf used on input line 32
+7.
+(pdftex.def)             Requested size: 364.19536pt x 203.51617pt.
+ [25
 
 ]
+<antlr.jpg, id=517, 190.7125pt x 190.7125pt>
+File: antlr.jpg Graphic file (type jpg)
+ <use antlr.jpg>
+Package pdftex.def Info: antlr.jpg used on input line 362.
+(pdftex.def)             Requested size: 42.67912pt x 42.67856pt.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 362.
 File: ups.jpg Graphic file (type jpg)
  <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 391.
+Package pdftex.def Info: ups.jpg used on input line 362.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -2079,10 +2263,14 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 
 [26
 
-]
+ <./antlr.jpg>]
+File: antlr.jpg Graphic file (type jpg)
+ <use antlr.jpg>
+Package pdftex.def Info: antlr.jpg used on input line 362.
+(pdftex.def)             Requested size: 42.67912pt x 42.67856pt.
 File: ups.jpg Graphic file (type jpg)
  <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 391.
+Package pdftex.def Info: ups.jpg used on input line 362.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -2097,9 +2285,13 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 [27
 
 ]
+File: antlr.jpg Graphic file (type jpg)
+ <use antlr.jpg>
+Package pdftex.def Info: antlr.jpg used on input line 362.
+(pdftex.def)             Requested size: 42.67912pt x 42.67856pt.
 File: ups.jpg Graphic file (type jpg)
  <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 391.
+Package pdftex.def Info: ups.jpg used on input line 362.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -2113,10 +2305,41 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 
 [28
 
-]
+] <FreeMaker.png, id=562, 167.95142pt x 26.46507pt>
+File: FreeMaker.png Graphic file (type png)
+ <use FreeMaker.png>
+Package pdftex.def Info: FreeMaker.png used on input line 389.
+(pdftex.def)             Requested size: 42.67912pt x 6.72487pt.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 389.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Package epstopdf Info: Source file: <test.eps>
+(epstopdf)                    date: 2014-06-09 17:56:05
+(epstopdf)                    size: 39909 bytes
+(epstopdf)             Output file: <test-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:07
+(epstopdf)                    size: 18385 bytes
+(epstopdf)             Command: <repstopdf --outfile=test-eps-converted-to.pdf 
+test.eps>
+(epstopdf)             \includegraphics on input line 389.
+Package epstopdf Info: Output file is already uptodate.
+
+<test-eps-converted-to.pdf, id=563, 714.67pt x 173.64874pt>
+File: test-eps-converted-to.pdf Graphic file (type pdf)
+
+<use test-eps-converted-to.pdf>
+Package pdftex.def Info: test-eps-converted-to.pdf used on input line 389.
+(pdftex.def)             Requested size: 227.62204pt x 55.30641pt.
+
+Overfull \hbox (33.05853pt too wide) in paragraph at lines 389--389
+ [] 
+ []
+
 File: ups.jpg Graphic file (type jpg)
- <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 391.
+<use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 389.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -2130,10 +2353,34 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 
 [29
 
-]
+ <./FreeMaker.png> <./test-eps-converted-to.pdf>]
+File: FreeMaker.png Graphic file (type png)
+ <use FreeMaker.png>
+Package pdftex.def Info: FreeMaker.png used on input line 389.
+(pdftex.def)             Requested size: 42.67912pt x 6.72487pt.
+Package epstopdf Info: Source file: <test.eps>
+(epstopdf)                    date: 2014-06-09 17:56:05
+(epstopdf)                    size: 39909 bytes
+(epstopdf)             Output file: <test-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:07
+(epstopdf)                    size: 18385 bytes
+(epstopdf)             Command: <repstopdf --outfile=test-eps-converted-to.pdf 
+test.eps>
+(epstopdf)             \includegraphics on input line 389.
+Package epstopdf Info: Output file is already uptodate.
+File: test-eps-converted-to.pdf Graphic file (type pdf)
+
+<use test-eps-converted-to.pdf>
+Package pdftex.def Info: test-eps-converted-to.pdf used on input line 389.
+(pdftex.def)             Requested size: 227.62204pt x 55.30641pt.
+
+Overfull \hbox (33.05853pt too wide) in paragraph at lines 389--389
+ [] 
+ []
+
 File: ups.jpg Graphic file (type jpg)
- <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 391.
+<use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 389.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -2148,9 +2395,32 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 [30
 
 ]
+File: FreeMaker.png Graphic file (type png)
+ <use FreeMaker.png>
+Package pdftex.def Info: FreeMaker.png used on input line 389.
+(pdftex.def)             Requested size: 42.67912pt x 6.72487pt.
+Package epstopdf Info: Source file: <test.eps>
+(epstopdf)                    date: 2014-06-09 17:56:05
+(epstopdf)                    size: 39909 bytes
+(epstopdf)             Output file: <test-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-09 18:17:07
+(epstopdf)                    size: 18385 bytes
+(epstopdf)             Command: <repstopdf --outfile=test-eps-converted-to.pdf 
+test.eps>
+(epstopdf)             \includegraphics on input line 389.
+Package epstopdf Info: Output file is already uptodate.
+File: test-eps-converted-to.pdf Graphic file (type pdf)
+ <use test-eps-converted-to.pdf>
+Package pdftex.def Info: test-eps-converted-to.pdf used on input line 389.
+(pdftex.def)             Requested size: 227.62204pt x 55.30641pt.
+
+Overfull \hbox (33.05853pt too wide) in paragraph at lines 389--389
+ [] 
+ []
+
 File: ups.jpg Graphic file (type jpg)
- <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 391.
+<use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 389.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -2167,7 +2437,7 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 ]
 File: ups.jpg Graphic file (type jpg)
  <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 391.
+Package pdftex.def Info: ups.jpg used on input line 410.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -2184,7 +2454,7 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 ]
 File: ups.jpg Graphic file (type jpg)
  <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 391.
+Package pdftex.def Info: ups.jpg used on input line 410.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -2201,7 +2471,7 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 ]
 File: ups.jpg Graphic file (type jpg)
  <use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 391.
+Package pdftex.def Info: ups.jpg used on input line 410.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -2215,15 +2485,10 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 
 [34
 
-] <interrogation.jpg, id=633, 313.17pt x 481.8pt>
-File: interrogation.jpg Graphic file (type jpg)
- <use interrogation.jpg>
-Package pdftex.def Info: interrogation.jpg used on input line 397.
-(pdftex.def)             Requested size: 99.58464pt x 153.20872pt.
+]
 File: ups.jpg Graphic file (type jpg)
-
-<use ups.jpg>
-Package pdftex.def Info: ups.jpg used on input line 397.
+ <use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 410.
 (pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
 
 Overfull \hbox (72.59995pt too wide) has occurred while \output is active
@@ -2237,6 +2502,130 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 
 [35
 
+]
+File: ups.jpg Graphic file (type jpg)
+ <use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 432.
+(pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
+
+Overfull \hbox (72.59995pt too wide) has occurred while \output is active
+[] [][] 
+ []
+
+
+Overfull \hbox (2.80698pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[36
+
+]
+File: ups.jpg Graphic file (type jpg)
+ <use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 432.
+(pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
+
+Overfull \hbox (72.59995pt too wide) has occurred while \output is active
+[] [][] 
+ []
+
+
+Overfull \hbox (2.80698pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[37
+
+]
+File: ups.jpg Graphic file (type jpg)
+ <use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 432.
+(pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
+
+Overfull \hbox (72.59995pt too wide) has occurred while \output is active
+[] [][] 
+ []
+
+
+Overfull \hbox (2.80698pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[38
+
+]
+File: ups.jpg Graphic file (type jpg)
+ <use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 432.
+(pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
+
+Overfull \hbox (72.59995pt too wide) has occurred while \output is active
+[] [][] 
+ []
+
+
+Overfull \hbox (2.80698pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[39
+
+]
+File: ups.jpg Graphic file (type jpg)
+ <use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 432.
+(pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
+
+Overfull \hbox (72.59995pt too wide) has occurred while \output is active
+[] [][] 
+ []
+
+
+Overfull \hbox (2.80698pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[40
+
+]
+File: ups.jpg Graphic file (type jpg)
+ <use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 432.
+(pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
+
+Overfull \hbox (72.59995pt too wide) has occurred while \output is active
+[] [][] 
+ []
+
+
+Overfull \hbox (2.80698pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[41
+
+] <interrogation.jpg, id=768, 313.17pt x 481.8pt>
+File: interrogation.jpg Graphic file (type jpg)
+ <use interrogation.jpg>
+Package pdftex.def Info: interrogation.jpg used on input line 438.
+(pdftex.def)             Requested size: 99.58464pt x 153.20872pt.
+File: ups.jpg Graphic file (type jpg)
+
+<use ups.jpg>
+Package pdftex.def Info: ups.jpg used on input line 438.
+(pdftex.def)             Requested size: 68.28644pt x 22.8764pt.
+
+Overfull \hbox (72.59995pt too wide) has occurred while \output is active
+[] [][] 
+ []
+
+
+Overfull \hbox (2.80698pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[42
+
  <./interrogation.jpg>]
 \tf@nav=\write6
 \openout6 = `diapo.nav'.
@@ -2247,33 +2636,35 @@ Overfull \hbox (2.80698pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `diapo.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 398.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 398.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 439.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 439.
  (./diapo.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 398.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 398.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 439.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 439.
 Package rerunfilecheck Info: File `diapo.out' has not changed.
-(rerunfilecheck)             Checksum: 253C0C633D1C577B773A74CAB471D0F0;467.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 398.
+(rerunfilecheck)             Checksum: B8022AA82C9942A5A4B569BF5EB78976;467.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 439.
  ) 
 Here is how much of TeX's memory you used:
- 27074 strings out of 494232
- 493484 string characters out of 3160025
- 586970 words of memory out of 3000000
- 29611 multiletter control sequences out of 15000+200000
- 78747 words of font info for 84 fonts, out of 3000000 for 9000
+ 27132 strings out of 494232
+ 494521 string characters out of 3160025
+ 587088 words of memory out of 3000000
+ 29644 multiletter control sequences out of 15000+200000
+ 84802 words of font info for 93 fonts, out of 3000000 for 9000
  462 hyphenation exceptions out of 8191
  49i,17n,67p,941b,823s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
-lvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on diapo.pdf (35 pages, 307569 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helv
+etic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on diapo.pdf (42 pages, 583043 bytes).
 PDF statistics:
- 691 PDF objects out of 1000 (max. 8388607)
- 609 compressed objects within 7 object streams
- 79 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 836 PDF objects out of 1000 (max. 8388607)
+ 732 compressed objects within 8 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 268 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -6,4 +6,4 @@
 \beamer@sectionintoc {3}{Le probl\`eme des tests}{11}{0}{2}
 \beamer@sectionintoc {4}{La solution : GreenT}{14}{0}{3}
 \beamer@subsectionintoc {4}{1}{Fonctionnement g\'en\'eral}{15}{0}{3}
-\beamer@subsectionintoc {4}{2}{Parser et g\'en\'erateur}{21}{0}{3}
+\beamer@subsectionintoc {4}{2}{Parser et g\'en\'erateur}{26}{0}{3}

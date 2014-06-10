@@ -57,7 +57,7 @@
 \subtitle {}
 
 \author[Antoine de \bsc{Roquemaurel}] % (facultatif, \`a utiliser seulement avec plusieurs auteurs)
-{Antoine de \bsc{Roquemaurel}}
+{Antoine de \bsc{Roquemaurel}\newline ~\newline \footnotesize Du 14/04/2014 au 11/07/2014}
 
 % - Composez les noms dans l'ordre dans lequel ils apparaîtrons dans l'article
 % - Utilisez la commande \inst{?} uniquement si les auteurs ont des affiliations
@@ -226,6 +226,7 @@
 \end{frame}
 \section{Le probl\`eme des tests}
 \begin{frame}{Le problème des tests}
+	\vfill
 	Intégration du << plugin >>
 	\vspace{-10px}
 			\begin{itemize}
@@ -234,6 +235,7 @@
 				\item Spécification des variables fournie au format Excel
 			\end{itemize}
 			\pause
+	\vfill
 	Difficultés à tester ce plugin : 
 	\vspace{-10px}
 	\begin{itemize}
@@ -241,6 +243,7 @@
 		\item Temps des tests
 		\item Disponibilité des bancs de tests
 	\end{itemize}
+	\vfill
 \end{frame}
 
 \section{La solution : GreenT}
@@ -248,37 +251,64 @@
 \begin{frame}{Fonctionnalités nécessaires}
 \vspace{-10px}
 	\begin{itemize}
-		\item Parser le fichier de spécifications
+		\item Analyser le fichier de spécifications\newline
+			\footnotesize
+			$\rightarrow$ Fichier complété par un testeur au sein de Continental
+			\normalsize
+
 		\item Générer automatiquement des \bsc{jar} exécutables 
 		\item Rapport détaillé
 		\item Optimisation du temps d'exécution des tests
 	\end{itemize}
-
+	\vfill
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8.5cm]{fct.eps}
+		\caption{Fonctionnalités principales}
+	\end{figure}
 
 \end{frame}
 \begin{frame}{Fonctionnement des exécutables}
-	\begin{itemize}
+		  \setbeamercovered{transparent}
+	\begin{itemize}[<+->]
 	  \vfill
 		\item Un scénario de précondition
 		\begin{itemize}
 			\item Initialise le banc de tests
 		\end{itemize}
-		\pause
 	\vfill
 		\item Des scénarios de stimulation de l'environnement
 			\begin{itemize}
-			\item Pilotent le banc HIL qui génère les stimulis pour le calculateur sous test
+			\item Pilotent le banc HIL 
 			\item Enregistrement de variables durant les scénarios
 			\end{itemize}
-			\pause
 	\vfill
 		\item \textit{Expected Behavior }
 			\begin{itemize}
 				\item Expression logique 
 				\item Évaluée sur l'ensemble de l'enregistrement
 			\end{itemize}
-	\vfill
+			\vspace{-30px}
 	\end{itemize}
+	\begin{figure}[H]
+		\centering
+		\only<1,2> {
+			\includegraphics[width=9.5cm]{exe1.eps}
+		}
+		\only<3,4> {
+			\includegraphics[width=9.5cm]{exe2.eps}
+		}
+		\only<5> {
+			\includegraphics[width=9.5cm]{exe3.eps}
+		}
+		\only<6,7> {
+			\includegraphics[width=9.5cm]{exe4.eps}
+		}
+		\only<8> {
+			\includegraphics[width=9.5cm]{exe5.eps}
+		}
+		\caption{Fonctionnement d'un exécutable}
+	\end{figure}
 \end{frame}
 \begin{frame}{Fonctionnement de GreenT}
 	\only<1> {
@@ -298,10 +328,10 @@
 \subsection{Parser et g\'en\'erateur}
 \begin{frame}{Parser : utilisation de Antlr}
 	Parser: 
-	\vspace{-10px}
 \begin{wrapfigure}{r}{1.5cm}
 	\includegraphics[width=1.5cm]{antlr.jpg}
 \end{wrapfigure}
+	\vspace{-20px}
 	\begin{itemize}
 		\item Création de 2 grammaires 
 			\begin{itemize}
@@ -310,6 +340,7 @@
 			\end{itemize}
 			\footnotesize
 			\normalsize
+			\pause
 		\item Parcours de l'arbre
 			\begin{itemize}
 				\item Appel du générateur au niveau des feuilles
@@ -346,10 +377,14 @@
 			\item \texttt{StimScénario}
 			\item \texttt{GreenTTest} $\rightarrow$ Contient \textit{ExpectedBehavior}, informations du rapport, \ldots
 		\end{itemize}
-		\pause
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=8cm]{test.eps}
+		\end{figure}
 			\vfill
+		\pause
 		\item Générer du code qui sera compilé\newline
-			$\rightarrow$ Limiter les erreurs pendant l'exécution des tests
+			$\rightarrow$ Limiter les erreurs
 	\end{itemize}
 \end{frame}
 
@@ -363,31 +398,37 @@
 			\item Participation à la conception $\rightarrow$ Regard neuf
 			\item Développement de différents modules 
 				\begin{itemize}
-					\item<3-> Parser : terminé
-					\item<3-> Génération des scénarios : terminé
-					\item<3-> Génération des ExpectedBehavior : en cours
+					\item<3->Parser et génération des scénarios: terminés
+					\item<3-> Génération des
+						\textit{ExpectedBehavior} : en cours
 					\item<3-> Analyse des traces, rapport détaillé : à faire
 				\end{itemize}
+			\item Plateforme à destination d'une vingtaine de
+				projets\newline
+				$\rightarrow$ Centaines de milliers de véhicules
 		\end{itemize}
-	\vfill
-	\uncover<4->{
+\end{frame}
+\begin{frame}{Vers le master Développement Logiciel}
+		\vfill
 	Bilan personnel:
 	\vspace{-10px}
 		\begin{itemize}[<+->]
 		  \setbeamercovered{transparent}
-
 			\item D'un point de vue technique
 				\begin{itemize}
 					\item Expérience en conception logicielle
+						\scriptsize
+						\newline $\rightarrow$ UML, design patterns
 					\item Différentes visions d'un problème
 				\end{itemize}
+		\vfill
 			\item D'un point de vue humain
 				\begin{itemize}
 					\item Travail en équipe
 					\item Synthèse et restitutions
 				\end{itemize}
 		\end{itemize}
-		}
+		\vfill
 \end{frame}
 \begin{frame}{Avez-vous des questions ?}
 	\begin{figure}[H]
