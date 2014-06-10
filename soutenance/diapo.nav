@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.10pt}
+\beamer@endinputifotherversion {3.33pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}
@@ -43,17 +43,19 @@
 \headcommand {\beamer@subsectionentry {0}{4}{2}{21}{Parser et g\'en\'erateur}}\headcommand {\beamer@subsectionpages {15}{20}}
 \headcommand {\slideentry {4}{2}{1}{21/22}{Parser et g\'en\'erateur}{0}}
 \headcommand {\beamer@framepages {21}{22}}
-\headcommand {\slideentry {4}{2}{2}{23/25}{Parser et g\'en\'erateur}{0}}
-\headcommand {\beamer@framepages {23}{25}}
-\headcommand {\sectionentry {5}{Conclusion}{26}{Conclusion}{0}}
-\headcommand {\beamer@sectionpages {14}{25}}
-\headcommand {\beamer@subsectionpages {21}{25}}
-\headcommand {\slideentry {5}{0}{3}{26/34}{}{0}}
-\headcommand {\beamer@framepages {26}{34}}
-\headcommand {\slideentry {5}{0}{4}{35/35}{}{0}}
-\headcommand {\beamer@framepages {35}{35}}
-\headcommand {\beamer@partpages {1}{35}}
-\headcommand {\beamer@subsectionpages {26}{35}}
-\headcommand {\beamer@sectionpages {26}{35}}
-\headcommand {\beamer@documentpages {35}}
-\headcommand {\def \inserttotalframenumber {17}}
+\headcommand {\slideentry {4}{2}{2}{23/23}{Parser et g\'en\'erateur}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {4}{2}{3}{24/26}{Parser et g\'en\'erateur}{0}}
+\headcommand {\beamer@framepages {24}{26}}
+\headcommand {\sectionentry {5}{Conclusion}{27}{Conclusion}{0}}
+\headcommand {\beamer@sectionpages {14}{26}}
+\headcommand {\beamer@subsectionpages {21}{26}}
+\headcommand {\slideentry {5}{0}{4}{27/35}{}{0}}
+\headcommand {\beamer@framepages {27}{35}}
+\headcommand {\slideentry {5}{0}{5}{36/36}{}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\beamer@partpages {1}{36}}
+\headcommand {\beamer@subsectionpages {27}{36}}
+\headcommand {\beamer@sectionpages {27}{36}}
+\headcommand {\beamer@documentpages {36}}
+\headcommand {\def \inserttotalframenumber {18}}
